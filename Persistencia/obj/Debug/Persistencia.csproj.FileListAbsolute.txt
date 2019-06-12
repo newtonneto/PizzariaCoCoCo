@@ -1,0 +1,6 @@
+C:\Users\New2\source\repos\Projeto_POO\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\New2\source\repos\Projeto_POO\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\New2\source\repos\Projeto_POO\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\New2\source\repos\Projeto_POO\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\New2\source\repos\Projeto_POO\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\New2\source\repos\Projeto_POO\Persistencia\obj\Debug\Persistencia.pdb

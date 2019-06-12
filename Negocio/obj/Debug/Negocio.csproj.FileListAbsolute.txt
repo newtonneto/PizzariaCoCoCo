@@ -1,0 +1,11 @@
+C:\Users\New2\source\repos\Projeto_POO\Negocio\bin\Debug\Negocio.dll
+C:\Users\New2\source\repos\Projeto_POO\Negocio\bin\Debug\Negocio.pdb
+C:\Users\New2\source\repos\Projeto_POO\Negocio\bin\Debug\Modelo.dll
+C:\Users\New2\source\repos\Projeto_POO\Negocio\bin\Debug\Persistencia.dll
+C:\Users\New2\source\repos\Projeto_POO\Negocio\bin\Debug\Modelo.pdb
+C:\Users\New2\source\repos\Projeto_POO\Negocio\bin\Debug\Persistencia.pdb
+C:\Users\New2\source\repos\Projeto_POO\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\New2\source\repos\Projeto_POO\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\New2\source\repos\Projeto_POO\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\New2\source\repos\Projeto_POO\Negocio\obj\Debug\Negocio.dll
+C:\Users\New2\source\repos\Projeto_POO\Negocio\obj\Debug\Negocio.pdb

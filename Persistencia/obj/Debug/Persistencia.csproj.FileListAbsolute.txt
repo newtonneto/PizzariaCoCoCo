@@ -4,3 +4,12 @@ C:\Users\New2\source\repos\Projeto_POO\Persistencia\obj\Debug\Persistencia.cspro
 C:\Users\New2\source\repos\Projeto_POO\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
 C:\Users\New2\source\repos\Projeto_POO\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\New2\source\repos\Projeto_POO\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Modelo.dll
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Modelo.pdb
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.pdb

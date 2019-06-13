@@ -4,3 +4,9 @@ C:\Users\New2\source\repos\Projeto_POO\Modelo\obj\Debug\Modelo.csprojAssemblyRef
 C:\Users\New2\source\repos\Projeto_POO\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\New2\source\repos\Projeto_POO\Modelo\obj\Debug\Modelo.dll
 C:\Users\New2\source\repos\Projeto_POO\Modelo\obj\Debug\Modelo.pdb
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Modelo\bin\Debug\Modelo.dll
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Modelo\bin\Debug\Modelo.pdb
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.dll
+C:\Users\New2\Documents\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.pdb

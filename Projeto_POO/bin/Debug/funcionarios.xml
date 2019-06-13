@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ArrayOfMFuncionario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MFuncionario>
+    <Nome>new2</Nome>
+    <Cpf>01709231424</Cpf>
+    <Sexo>Masculino</Sexo>
+    <Nascimento>1993-08-10T00:00:00</Nascimento>
+    <Senha>123</Senha>
+    <Ativo>true</Ativo>
+  </MFuncionario>
+  <MFuncionario>
+    <Nome>paulla rachel</Nome>
+    <Cpf>123</Cpf>
+    <Sexo>Feminino</Sexo>
+    <Nascimento>2001-01-01T00:00:00</Nascimento>
+    <Senha>123</Senha>
+    <Ativo>true</Ativo>
+  </MFuncionario>
+  <MFuncionario>
+    <Nome>teste</Nome>
+    <Cpf>1</Cpf>
+    <Sexo>Feminino</Sexo>
+    <Nascimento>2001-01-01T00:00:00</Nascimento>
+    <Senha>1</Senha>
+    <Ativo>false</Ativo>
+  </MFuncionario>
+  <MFuncionario>
+    <Nome>rafinha cococo</Nome>
+    <Cpf>1</Cpf>
+    <Sexo>Feminino</Sexo>
+    <Nascimento>2001-01-01T00:00:00</Nascimento>
+    <Senha>1</Senha>
+    <Ativo>true</Ativo>
+  </MFuncionario>
+</ArrayOfMFuncionario>

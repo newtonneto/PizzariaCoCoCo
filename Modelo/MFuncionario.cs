@@ -10,10 +10,11 @@ namespace Modelo
     {
         public string Matricula { get; set; }
         public string Senha { get; set; }
+        public bool Ativo { get; set; }
 
         public override string ToString()
         {
-            return Nome + " " + Cpf;
+            return Nome + " / " + Cpf + " / " + Ativo;
         }
     }
 }

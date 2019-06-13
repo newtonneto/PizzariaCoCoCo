@@ -20,11 +20,15 @@
                 <RadioButton x:Name="radioButtonMasculino" Content="Masculino" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top"/>
                 <RadioButton x:Name="radioButtonFeminino" Content="Feminino" HorizontalAlignment="Left" Margin="140,66,0,0" VerticalAlignment="Top"/>
                 <TextBox x:Name="textBoxSenha" HorizontalAlignment="Left" Height="23" Margin="50,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-                <Button x:Name="button" Content="Cadastrar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarFuncionario_Click"/>
+                <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarFuncionario_Click"/>
+                <Button x:Name="buttonAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizar_Click" Visibility="Collapsed"/>
             </Grid>
         </GroupBox>
         <ListBox x:Name="listBoxFuncionarios" HorizontalAlignment="Left" Height="462" Margin="10,228,0,0" VerticalAlignment="Top" Width="319"/>
-        <Button x:Name="buttonListarFuncionarios" Content="Listar" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonListarFuncionarios_Click"/>
+        <Button x:Name="buttonListarFuncionarios" Content="Listar" HorizontalAlignment="Left" Margin="10,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonListarFuncionarios_Click"/>
+        <Button x:Name="buttonAtualizarFuncionario" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarFuncionario_Click"/>
+        <Button x:Name="buttonRemoverFuncionario" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonRemoverFuncionario_Click"/>
+        <Button x:Name="buttonDesativarFuncionario" Content="Desativar" HorizontalAlignment="Left" Margin="174,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonDesativarFuncionario_Click"/>
 
     </Grid>
 </Window>

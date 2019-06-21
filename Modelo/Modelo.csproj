@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FA797B0D-DF6E-4BEE-80C6-D49E3CA0B64C}</ProjectGuid>
+    <ProjectGuid>{3814A839-B5DA-4B7E-9B62-2BF2870BCC77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Modelo</RootNamespace>
     <AssemblyName>Modelo</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroIncompletoException.cs" />
     <Compile Include="MCliente.cs" />
     <Compile Include="MFuncionario.cs" />
     <Compile Include="MGerente.cs" />

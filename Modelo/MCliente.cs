@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class MCliente : MPessoa
+    public class MCliente : MPessoa
     {
         public List<MPedido> Pedidos { get; set; }
     }

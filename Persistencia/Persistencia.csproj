@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F9836C28-FBC2-47F3-B3BE-FC2D6330636F}</ProjectGuid>
+    <ProjectGuid>{D32D3897-AE83-4F89-9683-473E7A55451D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Persistencia</RootNamespace>
     <AssemblyName>Persistencia</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
-      <Project>{fa797b0d-df6e-4bee-80c6-d49e3ca0b64c}</Project>
+      <Project>{3814a839-b5da-4b7e-9b62-2bf2870bcc77}</Project>
       <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>

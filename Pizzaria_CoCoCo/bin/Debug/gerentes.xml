@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ArrayOfMGerente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MGerente>
+    <Nome>admin</Nome>
+    <Cpf>001</Cpf>
+    <Sexo>Masculino</Sexo>
+    <Nascimento>2001-01-01T00:00:00</Nascimento>
+    <Senha>666</Senha>
+    <Ativo>true</Ativo>
+  </MGerente>
+</ArrayOfMGerente>

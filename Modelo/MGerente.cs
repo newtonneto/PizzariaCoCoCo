@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class MGerente : MFuncionario
+    public class MGerente : MFuncionario
     {
     }
 }

@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA5F4FC3-C2D8-4DB9-A43B-80CB0E5E5357}</ProjectGuid>
+    <ProjectGuid>{482AE4C7-0995-4E99-8130-861EE55227CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Negocio</RootNamespace>
     <AssemblyName>Negocio</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -47,16 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
-      <Project>{fa797b0d-df6e-4bee-80c6-d49e3ca0b64c}</Project>
+      <Project>{3814a839-b5da-4b7e-9b62-2bf2870bcc77}</Project>
       <Name>Modelo</Name>
     </ProjectReference>
     <ProjectReference Include="..\Persistencia\Persistencia.csproj">
-      <Project>{f9836c28-fbc2-47f3-b3be-fc2d6330636f}</Project>
+      <Project>{d32d3897-ae83-4f89-9683-473e7a55451d}</Project>
       <Name>Persistencia</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -239,5 +239,150 @@ namespace Pizzaria_CoCoCo
                 MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
             }
         }
+
+        //Cria um novo delicioso sabor de pizza uhmm uhmm uhmm
+        private void buttonCadastrarPizza_Click(object sender, RoutedEventArgs e)
+        {
+            //Lista para armazenar todos os ingredientes da pizza
+            List<string> ingredientes = new List<string>();
+
+            try
+            {
+                MPizza novaPizza = new MPizza();
+                novaPizza.Tipo = textBoxNomePizza.Text;
+
+                if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Azeitona");
+                }
+                if (checkBoxBacon.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Bacon");
+                }
+                if (checkBoxBrocolis.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Brócolis");
+                }
+                if (checkBoxCalabresa.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Calabresa");
+                }
+                if (checkBoxCamarao.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Camarão");
+                }
+                if (checkBoxCarneDeSol.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Carne de Sol");
+                }
+                if (checkBoxCatupiry.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Catupiry");
+                }
+                if (checkBoxCebola.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Cebola");
+                }
+                if (checkBoxChampignon.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Champignon");
+                }
+                if (checkBoxErvilha.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Ervilha");
+                }
+                if (checkBoxFrango.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Frango");
+                }
+                if (checkBoxLombo.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Lombo");
+                }
+                if (checkBoxManjericao.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Manjericão");
+                }
+                if (checkBoxMilho.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Milho");
+                }
+                if (checkBoxMolhoDeTomate.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Molho de Tomate");
+                }
+                if (checkBoxOregano.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Orégano");
+                }
+                if (checkBoxOvo.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Ovo");
+                }
+                if (checkBoxPalmito.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Palmito");
+                }
+                if (checkBoxPepperoni.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Pepperoni");
+                }
+                if (checkBoxPresunto.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Presunto");
+                }
+                if (checkBoxQueijoCoalho.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Coalho");
+                }
+                if (checkBoxQueijoGorgonzola.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Gorgonzola");
+                }
+                if (checkBoxQueijoMussarela.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Mussarela");
+                }
+                if (checkBoxQueijoParmessao.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Parmessão");
+                }
+                if (checkBoxQueijoProvolone.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Provolone");
+                }
+                if (checkBoxRucula.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Rúcula");
+                }
+                if (checkBoxTomate.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Tomate");
+                }
+                if (checkBoxTomateCereja.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Tomate Cereja");
+                }
+
+                novaPizza.Ingredientes = ingredientes;
+                novaPizza.Preco = Double.Parse(textBoxPreco.Text);
+            }
+            catch (CadastroIncompletoException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void CheckBoxAzeitona_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
     }
 }

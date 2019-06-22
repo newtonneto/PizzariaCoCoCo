@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Pizzaria CoCoCo" Height="768" Width="1024">
     <Grid>
-        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Visible">
+        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
             <TextBlock x:Name="textBlock5" HorizontalAlignment="Center" Margin="0,106,0,0" TextWrapping="Wrap" Text="LOGIN" VerticalAlignment="Top" FontSize="48"/>
             <Grid HorizontalAlignment="Center" Height="93" Margin="370,250,370,0" VerticalAlignment="Top" Width="256">
                 <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
@@ -18,8 +18,8 @@
             </Grid>
 
         </Grid>
-        <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
-            <GroupBox x:Name="groupBox" Header="Cadastrar Funcionário" HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="319">
+        <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Visible">
+            <GroupBox x:Name="groupBoxFuncionario" Header="Cadastrar Funcionário" HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="190" Margin="10,10,0,0" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
@@ -41,6 +41,45 @@
             <Button x:Name="buttonAtualizarFuncionario" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarFuncionario_Click"/>
             <Button x:Name="buttonRemoverFuncionario" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonRemoverFuncionario_Click"/>
             <Button x:Name="buttonDesativarFuncionario" Content="Desativar" HorizontalAlignment="Left" Margin="174,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonDesativarFuncionario_Click"/>
+            <GroupBox x:Name="groupBoxPizza" Header="Cadastrar Pizza" HorizontalAlignment="Left" Height="705" Margin="339,10,0,0" VerticalAlignment="Top" Width="319">
+                <Grid HorizontalAlignment="Left" Height="685" Margin="10,10,-6,-12" VerticalAlignment="Top" Width="303">
+                    <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Preço:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="textBoxNomePizza" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+                    <TextBox x:Name="textBoxPreco" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Text="0.0"/>
+                    <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Ingredientes:" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxAzeitona" Content="Azeitona" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Checked="CheckBoxAzeitona_Checked" Unchecked="CheckBoxAzeitona_Checked"/>
+                    <CheckBox x:Name="checkBoxBacon" Content="Bacon" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxBrocolis" Content="Brócolis" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxCalabresa" Content="Calabresa" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxCamarao" Content="Camarão" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxCarneDeSol" Content="Carne de Sol" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxCatupiry" Content="Catupiry" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxCebola" Content="Cebola" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxChampignon" Content="Champignon" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxErvilha" Content="Ervilha" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxFrango" Content="Frango" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxLombo" Content="Lombo" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxManjericao" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,327,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxMilho" Content="Milho" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxMolhoDeTomate" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxOregano" Content="Orégano" HorizontalAlignment="Left" Margin="10,387,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxOvo" Content="Ovo" HorizontalAlignment="Left" Margin="10,407,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxPalmito" Content="Palmito" HorizontalAlignment="Left" Margin="10,427,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxPepperoni" Content="Pepperoni" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxPresunto" Content="Presunto" HorizontalAlignment="Left" Margin="10,467,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxQueijoMussarela" Content="Queijo Mussarela" HorizontalAlignment="Left" Margin="10,487,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxQueijoParmessao" Content="Queijo Parmesão" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxQueijoGorgonzola" Content="Queijo Gorgonzola" HorizontalAlignment="Left" Margin="10,527,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxQueijoProvolone" Content="Queijo Provolone" HorizontalAlignment="Left" Margin="10,547,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxQueijoCoalho" Content="Queijo Coalho" HorizontalAlignment="Left" Margin="10,567,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxRucula" Content="Rúcula" HorizontalAlignment="Left" Margin="10,587,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxTomate" Content="Tomate" HorizontalAlignment="Left" Margin="10,607,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxTomateCereja" Content="Tomate Cereja" HorizontalAlignment="Left" Margin="10,627,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="buttonCadastrarPizza" Content="Cadastrar" HorizontalAlignment="Right" Margin="0,647,10,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarPizza_Click"/>
+                </Grid>
+
+            </GroupBox>
         </Grid>
         <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
 

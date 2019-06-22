@@ -32,6 +32,7 @@ namespace Pizzaria_CoCoCo
     public partial class MainWindow : Window
     {
         NGerente admin = new NGerente();
+        NFuncionario funcionario = new NFuncionario();
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace Pizzaria_CoCoCo
 
         private void atualizaListBoxFuncionarios()
         {
-            List<MFuncionario> listaDeFuncionarios = admin.ListarFuncionarios();
+            List<MFuncionario> listaDeFuncionarios = funcionario.ListarFuncionarios();
 
             listBoxFuncionarios.Items.Clear();
             foreach (MFuncionario f in listaDeFuncionarios)
@@ -62,11 +63,15 @@ namespace Pizzaria_CoCoCo
 
         private void ButtonEntrarSistema_Click(object sender, RoutedEventArgs e)
         {
-            NGerente admin = new NGerente();
-            if (admin.autorizaLogin(textBoxLoginCpf.Text, textBoxLoginSenha.Text, "gerentes.xml"))
+            if (admin.autorizaLoginGerente(textBoxLoginCpf.Text, textBoxLoginSenha.Text))
             {
                 gridLogin.Visibility = Visibility.Collapsed;
                 gridGerente.Visibility = Visibility.Visible;
+            }
+            else if (funcionario.autorizaLoginFuncionario(textBoxLoginCpf.Text, textBoxLoginSenha.Text))
+            {
+                gridLogin.Visibility = Visibility.Collapsed;
+                gridFuncionario.Visibility = Visibility.Visible;
             }
             else
             {
@@ -96,7 +101,7 @@ namespace Pizzaria_CoCoCo
                 novoFuncionario.Ativo = true;
 
                 //Envia o objeto funcionario criado para um objeto de classe gerente
-                admin.InserirFuncionario(novoFuncionario);
+                funcionario.InserirFuncionario(novoFuncionario);
             }
             catch (CadastroIncompletoException erro)
             {
@@ -181,7 +186,7 @@ namespace Pizzaria_CoCoCo
                 novoFuncionario.Senha = textBoxSenha.Text;
 
                 //Envia o objeto funcionario criado para um objeto de classe gerente
-                admin.AtualizarFuncionario(novoFuncionario);
+                funcionario.AtualizarFuncionario(novoFuncionario);
             }
             catch (CadastroIncompletoException erro)
             {
@@ -211,7 +216,7 @@ namespace Pizzaria_CoCoCo
             try
             {
                 MFuncionario funcionarioRemover = (MFuncionario)listBoxFuncionarios.SelectedItem;
-                admin.DeletarFuncionario(funcionarioRemover);
+                funcionario.DeletarFuncionario(funcionarioRemover);
                 atualizaListBoxFuncionarios();
             }
             catch (NullReferenceException erro)
@@ -226,7 +231,7 @@ namespace Pizzaria_CoCoCo
             {
                 MFuncionario funcionarioEstado = (MFuncionario)listBoxFuncionarios.SelectedItem;
                 funcionarioEstado.Ativo = false;
-                admin.AtualizarFuncionario(funcionarioEstado);
+                funcionario.AtualizarFuncionario(funcionarioEstado);
                 atualizaListBoxFuncionarios();
             }
             catch (NullReferenceException erro)

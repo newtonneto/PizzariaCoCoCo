@@ -226,22 +226,22 @@ namespace Pizzaria_CoCoCo
             //Cria um novo funcionario pegando as informações contidas nas TextBoxes
             try
             {
-                MFuncionario novoFuncionario = new MFuncionario();
-                novoFuncionario.Nome = textBoxNome.Text;
-                novoFuncionario.Cpf = textBoxCpf.Text;
+                MFuncionario funcionarioAtualizado = new MFuncionario();
+                funcionarioAtualizado.Nome = textBoxNome.Text;
+                funcionarioAtualizado.Cpf = textBoxCpf.Text;
                 if (radioButtonMasculino.IsChecked == true)
                 {
-                    novoFuncionario.Sexo = "Masculino";
+                    funcionarioAtualizado.Sexo = "Masculino";
                 }
                 if (radioButtonFeminino.IsChecked == true)
                 {
-                    novoFuncionario.Sexo = "Feminino";
+                    funcionarioAtualizado.Sexo = "Feminino";
                 }
-                novoFuncionario.Nascimento = DateTime.Parse(textBoxDataDeNascimento.Text);
-                novoFuncionario.Senha = textBoxSenha.Text;
+                funcionarioAtualizado.Nascimento = DateTime.Parse(textBoxDataDeNascimento.Text);
+                funcionarioAtualizado.Senha = textBoxSenha.Text;
 
                 //Envia o objeto funcionario criado para um objeto de classe gerente
-                funcionario.AtualizarFuncionario(novoFuncionario);
+                funcionario.AtualizarFuncionario(funcionarioAtualizado);
             }
             catch (CadastroIncompletoException erro)
             {
@@ -915,8 +915,8 @@ namespace Pizzaria_CoCoCo
 
             try
             {
-                MPizza novaPizza = new MPizza();
-                novaPizza.Tipo = textBoxNomePizza.Text;
+                MPizza pizzaAtualizada = new MPizza();
+                pizzaAtualizada.Tipo = textBoxNomePizza.Text;
 
                 if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
                 {
@@ -1031,10 +1031,10 @@ namespace Pizzaria_CoCoCo
                     ingredientes.Add("Tomate Cereja");
                 }
 
-                novaPizza.Ingredientes = ingredientes;
-                novaPizza.Preco = Double.Parse(textBoxPreco.Text);
+                pizzaAtualizada.Ingredientes = ingredientes;
+                pizzaAtualizada.Preco = Double.Parse(textBoxPreco.Text);
 
-                pizza.AtualizarPizza(novaPizza);
+                pizza.AtualizarPizza(pizzaAtualizada);
             }
             catch (CadastroIncompletoException erro)
             {

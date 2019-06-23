@@ -8,7 +8,7 @@ namespace Modelo
 {
     public class MFuncionario : MPessoa
     {
-        public string Matricula { get; set; }
+        //public string Matricula { get; set; }
         public string Senha { get; set; }
         public bool Ativo { get; set; }
 

@@ -2,18 +2,6 @@
 <ArrayOfMPizza xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <MPizza>
     <IdPizza>0</IdPizza>
-    <Tipo>Mussarela</Tipo>
-    <Preco>500</Preco>
-    <Ingredientes>
-      <string>Azeitona</string>
-      <string>Manjericão</string>
-      <string>Orégano</string>
-      <string>Queijo Mussarela</string>
-      <string>Tomate</string>
-    </Ingredientes>
-  </MPizza>
-  <MPizza>
-    <IdPizza>0</IdPizza>
     <Tipo>Frango</Tipo>
     <Preco>400</Preco>
     <Ingredientes>
@@ -22,6 +10,7 @@
       <string>Manjericão</string>
       <string>Queijo Mussarela</string>
     </Ingredientes>
+    <Ativo>true</Ativo>
   </MPizza>
   <MPizza>
     <IdPizza>0</IdPizza>
@@ -33,5 +22,18 @@
       <string>Manjericão</string>
       <string>Queijo Mussarela</string>
     </Ingredientes>
+    <Ativo>true</Ativo>
+  </MPizza>
+  <MPizza>
+    <IdPizza>0</IdPizza>
+    <Tipo>Mussarela</Tipo>
+    <Preco>4</Preco>
+    <Ingredientes>
+      <string>Azeitona</string>
+      <string>Manjericão</string>
+      <string>Orégano</string>
+      <string>Tomate</string>
+    </Ingredientes>
+    <Ativo>false</Ativo>
   </MPizza>
 </ArrayOfMPizza>

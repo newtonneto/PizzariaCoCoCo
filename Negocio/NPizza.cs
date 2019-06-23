@@ -45,7 +45,7 @@ namespace Negocio
             dados.Salvar(listaDePizzas);
         }
 
-        public void DeletaPizza(string nomeDaPizza)
+        public void DeletarPizza(string nomeDaPizza)
         {
             PPizza dados = new PPizza();
             List<MPizza> listaDePizzas = dados.Abrir();

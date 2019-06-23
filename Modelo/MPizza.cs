@@ -12,10 +12,11 @@ namespace Modelo
         public string Tipo { get; set; }
         public double Preco { get; set; }
         public List<string> Ingredientes { get; set; }
+        public bool Ativo { get; set; }
 
         public override string ToString()
         {
-            return Tipo + " / R$" + Preco;
+            return Tipo + " / R$" + Preco + " / " + Ativo;
         }
     }
 }

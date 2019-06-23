@@ -198,11 +198,11 @@ namespace Pizzaria_CoCoCo
             buttonAtualizar.Visibility = Visibility.Visible;
             try
             {
-                MFuncionario funcionadoDesatualizado = (MFuncionario)listBoxFuncionarios.SelectedItem;
-                textBoxNome.Text = funcionadoDesatualizado.Nome;
-                textBoxCpf.Text = funcionadoDesatualizado.Cpf;
+                MFuncionario funcionarioDesatualizado = (MFuncionario)listBoxFuncionarios.SelectedItem;
+                textBoxNome.Text = funcionarioDesatualizado.Nome;
+                textBoxCpf.Text = funcionarioDesatualizado.Cpf;
                 textBoxCpf.IsEnabled = false; //Antes de implementar, encontrar uma forma de reativar sem procisar ficar chamando o metodo em todos os botões
-                if (funcionadoDesatualizado.Sexo.Equals("Masculino"))
+                if (funcionarioDesatualizado.Sexo.Equals("Masculino"))
                 {
                     radioButtonMasculino.IsChecked = true;
                 }
@@ -210,8 +210,8 @@ namespace Pizzaria_CoCoCo
                 {
                     radioButtonFeminino.IsChecked = true;
                 }
-                textBoxDataDeNascimento.Text = funcionadoDesatualizado.Nascimento.ToString();
-                textBoxSenha.Text = funcionadoDesatualizado.Senha;
+                textBoxDataDeNascimento.Text = funcionarioDesatualizado.Nascimento.ToString();
+                textBoxSenha.Text = funcionarioDesatualizado.Senha;
 
             }
             catch (NullReferenceException erro)
@@ -421,6 +421,7 @@ namespace Pizzaria_CoCoCo
 
                 novaPizza.Ingredientes = ingredientes;
                 novaPizza.Preco = Double.Parse(textBoxPreco.Text);
+                novaPizza.Ativo = true;
 
                 pizza.InserirPizza(novaPizza);
             }
@@ -438,11 +439,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 1.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 1.0).ToString();
             }
         }
 
@@ -450,11 +451,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxBacon.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 3.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 3.0).ToString();
             }
         }
 
@@ -462,11 +463,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxBrocolis.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 3.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 3.0).ToString();
             }
         }
 
@@ -474,11 +475,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxCalabresa.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 2.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 2.0).ToString();
             }
         }
 
@@ -486,11 +487,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxCamarao.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 3.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 3.0).ToString();
             }
         }
 
@@ -498,11 +499,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxCarneDeSol.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 2.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 2.50).ToString();
             }
         }
 
@@ -510,11 +511,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxCatupiry.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 1.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 1.50).ToString();
             }
         }
 
@@ -522,11 +523,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxCebola.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 1.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 1.0).ToString();
             }
         }
 
@@ -534,11 +535,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxChampignon.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 3.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 3.50).ToString();
             }
         }
 
@@ -546,11 +547,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxErvilha.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 0.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 0.50).ToString();
             }
         }
 
@@ -558,11 +559,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxFrango.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 4.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 4.0).ToString();
             }
         }
 
@@ -570,11 +571,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxLombo.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 5.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 5.0).ToString();
             }
         }
 
@@ -582,11 +583,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxManjericao.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 1.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 1.0).ToString();
             }
         }
 
@@ -594,11 +595,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxMilho.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 0.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 0.50).ToString();
             }
         }
 
@@ -606,11 +607,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxMolhoDeTomate.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 3.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 3.0).ToString();
             }
         }
 
@@ -618,11 +619,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxOregano.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 0.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 0.50).ToString();
             }
         }
 
@@ -630,11 +631,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxOvo.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 1.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 1.0).ToString();
             }
         }
 
@@ -642,11 +643,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxPalmito.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 3.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 3.50).ToString();
             }
         }
 
@@ -654,11 +655,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxPepperoni.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 3.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 3.0).ToString();
             }
         }
 
@@ -666,11 +667,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxPresunto.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 2.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 2.0).ToString();
             }
         }
 
@@ -678,11 +679,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxQueijoCoalho.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 4.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 4.50).ToString();
             }
         }
 
@@ -690,11 +691,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxQueijoGorgonzola.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 4.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 4.0).ToString();
             }
         }
 
@@ -702,11 +703,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxQueijoMussarela.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 2.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 2.0).ToString();
             }
         }
 
@@ -714,11 +715,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxQueijoParmessao.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 3.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 3.0).ToString();
             }
         }
 
@@ -726,11 +727,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxQueijoProvolone.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 5.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 5.0).ToString();
             }
         }
 
@@ -738,11 +739,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxRucula.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 2.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 2.0).ToString();
             }
         }
 
@@ -750,11 +751,11 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxTomate.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 1.50).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 1.50).ToString();
             }
         }
 
@@ -762,11 +763,315 @@ namespace Pizzaria_CoCoCo
         {
             if (checkBoxTomateCereja.IsChecked.GetValueOrDefault())
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 2.0).ToString();
             }
             else
             {
-                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 2.0).ToString();
+            }
+        }
+
+        private void ButtonListarPizzas_Click(object sender, RoutedEventArgs e)
+        {
+            atualizaListBoxPizzas();
+        }
+
+        private void ButtonAtualizarPizza_Click(object sender, RoutedEventArgs e)
+        {
+            buttonCadastrarPizza.Visibility = Visibility.Collapsed;
+            buttonAtualizarCadastroPizza.Visibility = Visibility.Visible;
+            try
+            {
+                MPizza pizzaDesatualizada = (MPizza)listBoxPizzas.SelectedItem;
+                textBoxNomePizza.Text = pizzaDesatualizada.Tipo;
+                //textBoxPreco.Text = pizzaDesatualizada.Preco.ToString();
+
+                //Ativa as checkbox de ingredientes
+                foreach (string ingrediente in pizzaDesatualizada.Ingredientes)
+                {
+                    if (ingrediente == "Azeitona")
+                    {
+                        checkBoxAzeitona.IsChecked = true;
+                    }
+                    else if (ingrediente == "Bacon")
+                    {
+                        checkBoxBacon.IsChecked = true;
+                    }
+                    else if (ingrediente == "Brócolis")
+                    {
+                        checkBoxBrocolis.IsChecked = true;
+                    }
+                    else if (ingrediente == "Calabresa")
+                    {
+                        checkBoxCalabresa.IsChecked = true;
+                    }
+                    else if (ingrediente == "Camarão")
+                    {
+                        checkBoxCamarao.IsChecked = true;
+                    }
+                    else if (ingrediente == "Carne de Sol")
+                    {
+                        checkBoxCarneDeSol.IsChecked = true;
+                    }
+                    else if (ingrediente == "Catupiry")
+                    {
+                        checkBoxCatupiry.IsChecked = true;
+                    }
+                    else if (ingrediente == "Cebola")
+                    {
+                        checkBoxCebola.IsChecked = true;
+                    }
+                    else if (ingrediente == "Champignon")
+                    {
+                        checkBoxChampignon.IsChecked = true;
+                    }
+                    else if (ingrediente == "Ervilha")
+                    {
+                        checkBoxErvilha.IsChecked = true;
+                    }
+                    else if (ingrediente == "Frango")
+                    {
+                        checkBoxFrango.IsChecked = true;
+                    }
+                    else if (ingrediente == "Lombo")
+                    {
+                        checkBoxLombo.IsChecked = true;
+                    }
+                    else if (ingrediente == "Manjericão")
+                    {
+                        checkBoxManjericao.IsChecked = true;
+                    }
+                    else if (ingrediente == "Milho")
+                    {
+                        checkBoxMilho.IsChecked = true;
+                    }
+                    else if (ingrediente == "Molho de Tomate")
+                    {
+                        checkBoxMolhoDeTomate.IsChecked = true;
+                    }
+                    else if (ingrediente == "Orégano")
+                    {
+                        checkBoxOregano.IsChecked = true;
+                    }
+                    else if (ingrediente == "Ovo")
+                    {
+                        checkBoxOvo.IsChecked = true;
+                    }
+                    else if (ingrediente == "Palmito")
+                    {
+                        checkBoxPalmito.IsChecked = true;
+                    }
+                    else if (ingrediente == "Pepperoni")
+                    {
+                        checkBoxPepperoni.IsChecked = true;
+                    }
+                    else if (ingrediente == "Presunto")
+                    {
+                        checkBoxPresunto.IsChecked = true;
+                    }
+                    else if (ingrediente == "Queijo Coalho")
+                    {
+                        checkBoxQueijoCoalho.IsChecked = true;
+                    }
+                    else if (ingrediente == "Gorgonzola")
+                    {
+                        checkBoxQueijoGorgonzola.IsChecked = true;
+                    }
+                    else if (ingrediente == "Mussarela")
+                    {
+                        checkBoxQueijoMussarela.IsChecked = true;
+                    }
+                    else if (ingrediente == "Parmessão")
+                    {
+                        checkBoxQueijoParmessao.IsChecked = true;
+                    }
+                    else if (ingrediente == "Provolone")
+                    {
+                        checkBoxQueijoProvolone.IsChecked = true;
+                    }
+                    else if (ingrediente == "Rúcula")
+                    {
+                        checkBoxRucula.IsChecked = true;
+                    }
+                    else if (ingrediente == "Tomate")
+                    {
+                        checkBoxTomate.IsChecked = true;
+                    }
+                    else if (ingrediente == "Tomate Cereja")
+                    {
+                        checkBoxTomateCereja.IsChecked = true;
+                    }
+                }
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void ButtonAtualizarCadastroPizza_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> ingredientes = new List<string>();
+
+            try
+            {
+                MPizza novaPizza = new MPizza();
+                novaPizza.Tipo = textBoxNomePizza.Text;
+
+                if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Azeitona");
+                }
+                if (checkBoxBacon.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Bacon");
+                }
+                if (checkBoxBrocolis.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Brócolis");
+                }
+                if (checkBoxCalabresa.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Calabresa");
+                }
+                if (checkBoxCamarao.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Camarão");
+                }
+                if (checkBoxCarneDeSol.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Carne de Sol");
+                }
+                if (checkBoxCatupiry.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Catupiry");
+                }
+                if (checkBoxCebola.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Cebola");
+                }
+                if (checkBoxChampignon.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Champignon");
+                }
+                if (checkBoxErvilha.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Ervilha");
+                }
+                if (checkBoxFrango.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Frango");
+                }
+                if (checkBoxLombo.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Lombo");
+                }
+                if (checkBoxManjericao.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Manjericão");
+                }
+                if (checkBoxMilho.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Milho");
+                }
+                if (checkBoxMolhoDeTomate.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Molho de Tomate");
+                }
+                if (checkBoxOregano.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Orégano");
+                }
+                if (checkBoxOvo.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Ovo");
+                }
+                if (checkBoxPalmito.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Palmito");
+                }
+                if (checkBoxPepperoni.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Pepperoni");
+                }
+                if (checkBoxPresunto.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Presunto");
+                }
+                if (checkBoxQueijoCoalho.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Coalho");
+                }
+                if (checkBoxQueijoGorgonzola.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Gorgonzola");
+                }
+                if (checkBoxQueijoMussarela.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Mussarela");
+                }
+                if (checkBoxQueijoParmessao.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Parmessão");
+                }
+                if (checkBoxQueijoProvolone.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Queijo Provolone");
+                }
+                if (checkBoxRucula.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Rúcula");
+                }
+                if (checkBoxTomate.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Tomate");
+                }
+                if (checkBoxTomateCereja.IsChecked.GetValueOrDefault())
+                {
+                    ingredientes.Add("Tomate Cereja");
+                }
+
+                novaPizza.Ingredientes = ingredientes;
+                novaPizza.Preco = Double.Parse(textBoxPreco.Text);
+
+                pizza.AtualizarPizza(novaPizza);
+            }
+            catch (CadastroIncompletoException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+            finally
+            {
+                ResetaCadastroPizza();
+            }
+        }
+
+        private void ButtonDesativarPizza_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MPizza pizzaEstado = (MPizza)listBoxPizzas.SelectedItem;
+                pizzaEstado.Ativo = false;
+                pizza.AtualizarPizza(pizzaEstado);
+                atualizaListBoxPizzas();
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void ButtonRemoverPizza_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MPizza pizzaRemover = (MPizza)listBoxPizzas.SelectedItem;
+                pizza.DeletarPizza(pizzaRemover.Tipo);
+                atualizaListBoxPizzas();
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
             }
         }
     }

@@ -76,11 +76,16 @@
                     <CheckBox x:Name="checkBoxRucula" Content="Rúcula" HorizontalAlignment="Left" Margin="10,587,0,0" VerticalAlignment="Top" Checked="CheckBoxRucula_Checked" Unchecked="CheckBoxRucula_Checked"/>
                     <CheckBox x:Name="checkBoxTomate" Content="Tomate" HorizontalAlignment="Left" Margin="10,607,0,0" VerticalAlignment="Top" Checked="CheckBoxTomate_Checked" Unchecked="CheckBoxTomate_Checked"/>
                     <CheckBox x:Name="checkBoxTomateCereja" Content="Tomate Cereja" HorizontalAlignment="Left" Margin="10,627,0,0" VerticalAlignment="Top" Checked="CheckBoxTomateCereja_Checked" Unchecked="CheckBoxTomateCereja_Checked"/>
-                    <Button x:Name="buttonCadastrarPizza" Content="Cadastrar" HorizontalAlignment="Right" Margin="0,647,10,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarPizza_Click"/>
+                    <Button x:Name="buttonCadastrarPizza" Content="Cadastrar" HorizontalAlignment="Right" Margin="0,647,10,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarPizza_Click" Visibility="Visible"/>
+                    <Button x:Name="buttonAtualizarCadastroPizza" Content="Atualizar" HorizontalAlignment="Left" Margin="218,647,0,0" VerticalAlignment="Top" Width="75" Visibility="Collapsed" Click="ButtonAtualizarCadastroPizza_Click"/>
                 </Grid>
 
             </GroupBox>
             <ListBox x:Name="listBoxPizzas" HorizontalAlignment="Left" Height="669" Margin="667,21,0,0" VerticalAlignment="Top" Width="319"/>
+            <Button x:Name="buttonListarPizzas" Content="Listar" HorizontalAlignment="Left" Margin="667,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonListarPizzas_Click"/>
+            <Button x:Name="buttonAtualizarPizza" Content="Atualizar" HorizontalAlignment="Left" Margin="751,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonAtualizarPizza_Click"/>
+            <Button x:Name="buttonDesativarPizza" Content="Desativar" HorizontalAlignment="Left" Margin="831,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonDesativarPizza_Click"/>
+            <Button x:Name="buttonRemoverPizza" Content="Remover" HorizontalAlignment="Left" Margin="911,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverPizza_Click"/>
         </Grid>
         <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
 

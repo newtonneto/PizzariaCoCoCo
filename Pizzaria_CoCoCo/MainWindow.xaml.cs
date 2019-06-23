@@ -33,10 +33,12 @@ namespace Pizzaria_CoCoCo
     {
         NGerente admin = new NGerente();
         NFuncionario funcionario = new NFuncionario();
+        NPizza pizza = new NPizza();
         public MainWindow()
         {
             InitializeComponent();
             atualizaListBoxFuncionarios();
+            atualizaListBoxPizzas();
         }
 
         private void atualizaListBoxFuncionarios()
@@ -50,6 +52,17 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        private void atualizaListBoxPizzas()
+        {
+            List<MPizza> listaDePizzas = pizza.ListarPizzas();
+
+            listBoxPizzas.Items.Clear();
+            foreach (MPizza p in listaDePizzas)
+            {
+                listBoxPizzas.Items.Add(p);
+            }
+        }
+
         private void ativaTextBoxes()
         {
             textBoxNome.IsEnabled = true;
@@ -59,6 +72,55 @@ namespace Pizzaria_CoCoCo
             textBoxDataDeNascimento.IsEnabled = true;
             textBoxSenha.IsEnabled = true;
 
+        }
+
+        //Reseta todos os campos do cadastro de funcionario
+        private void ResetaCadastroFuncionario()
+        {
+            textBoxNome.Text = String.Empty;
+            textBoxCpf.Text = String.Empty;
+            radioButtonMasculino.IsChecked = false;
+            radioButtonFeminino.IsChecked = false;
+            textBoxDataDeNascimento.Text = String.Empty;
+            textBoxSenha.Text = String.Empty;
+            buttonCadastrar.Visibility = Visibility.Visible;
+            buttonAtualizar.Visibility = Visibility.Collapsed;
+            atualizaListBoxFuncionarios();
+        }
+
+        //Reseta todos os campos do cadastro de pizza
+        private void ResetaCadastroPizza()
+        {
+            textBoxNomePizza.Text = String.Empty;
+            checkBoxAzeitona.IsChecked = false;
+            checkBoxBacon.IsChecked = false;
+            checkBoxBrocolis.IsChecked = false;
+            checkBoxCalabresa.IsChecked = false;
+            checkBoxCamarao.IsChecked = false;
+            checkBoxCarneDeSol.IsChecked = false;
+            checkBoxCatupiry.IsChecked = false;
+            checkBoxCebola.IsChecked = false;
+            checkBoxChampignon.IsChecked = false;
+            checkBoxErvilha.IsChecked = false;
+            checkBoxFrango.IsChecked = false;
+            checkBoxLombo.IsChecked = false;
+            checkBoxManjericao.IsChecked = false;
+            checkBoxMilho.IsChecked = false;
+            checkBoxMolhoDeTomate.IsChecked = false;
+            checkBoxOregano.IsChecked = false;
+            checkBoxOvo.IsChecked = false;
+            checkBoxPalmito.IsChecked = false;
+            checkBoxPepperoni.IsChecked = false;
+            checkBoxPresunto.IsChecked = false;
+            checkBoxQueijoCoalho.IsChecked = false;
+            checkBoxQueijoGorgonzola.IsChecked = false;
+            checkBoxQueijoMussarela.IsChecked = false;
+            checkBoxQueijoParmessao.IsChecked = false;
+            checkBoxQueijoProvolone.IsChecked = false;
+            checkBoxRucula.IsChecked = false;
+            checkBoxTomate.IsChecked = false;
+            checkBoxTomateCereja.IsChecked = false;
+            atualizaListBoxPizzas();
         }
 
         private void ButtonEntrarSistema_Click(object sender, RoutedEventArgs e)
@@ -113,14 +175,7 @@ namespace Pizzaria_CoCoCo
             }
             finally
             {
-                //Limpa as TextBoxes
-                textBoxNome.Text = String.Empty;
-                textBoxCpf.Text = String.Empty;
-                radioButtonMasculino.IsChecked = false;
-                radioButtonFeminino.IsChecked = false;
-                textBoxDataDeNascimento.Text = String.Empty;
-                textBoxSenha.Text = String.Empty;
-                atualizaListBoxFuncionarios();
+                ResetaCadastroFuncionario();
             }
         }
 
@@ -366,16 +421,346 @@ namespace Pizzaria_CoCoCo
 
                 novaPizza.Ingredientes = ingredientes;
                 novaPizza.Preco = Double.Parse(textBoxPreco.Text);
+
+                pizza.InserirPizza(novaPizza);
             }
             catch (CadastroIncompletoException erro)
             {
                 MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+            finally
+            {
+                ResetaCadastroPizza();
             }
         }
 
         private void CheckBoxAzeitona_Checked(object sender, RoutedEventArgs e)
         {
             if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxBacon_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxBacon.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxBrocolis_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxBrocolis.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxCalabresa_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxCalabresa.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxCamarao_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxCamarao.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxCarneDeSol_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxCarneDeSol.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxCatupiry_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxCatupiry.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxCebola_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxCebola.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxChampignon_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxChampignon.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxErvilha_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxErvilha.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxFrango_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxFrango.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxLombo_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxLombo.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxManjericao_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxManjericao.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxMilho_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxMilho.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxMolhoDeTomate_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxMolhoDeTomate.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxOregano_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxOregano.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxOvo_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxOvo.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxPalmito_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxPalmito.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxPepperoni_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxPepperoni.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxPresunto_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxPresunto.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxQueijoCoalho_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxQueijoCoalho.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxQueijoGorgonzola_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxQueijoGorgonzola.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxQueijoMussarela_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxQueijoMussarela.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxQueijoParmessao_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxQueijoParmessao.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxQueijoProvolone_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxQueijoProvolone.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxRucula_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxRucula.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxTomate_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxTomate.IsChecked.GetValueOrDefault())
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
+            }
+            else
+            {
+                textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) - 100.0).ToString();
+            }
+        }
+
+        private void CheckBoxTomateCereja_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkBoxTomateCereja.IsChecked.GetValueOrDefault())
             {
                 textBoxPreco.Text = (Double.Parse(textBoxPreco.Text) + 100.0).ToString();
             }

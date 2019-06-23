@@ -46,40 +46,41 @@
                     <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Preço:" VerticalAlignment="Top"/>
                     <TextBox x:Name="textBoxNomePizza" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-                    <TextBox x:Name="textBoxPreco" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Text="0.0"/>
+                    <TextBox x:Name="textBoxPreco" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Text="0.0" IsEnabled="False"/>
                     <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Ingredientes:" VerticalAlignment="Top"/>
                     <CheckBox x:Name="checkBoxAzeitona" Content="Azeitona" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Checked="CheckBoxAzeitona_Checked" Unchecked="CheckBoxAzeitona_Checked"/>
-                    <CheckBox x:Name="checkBoxBacon" Content="Bacon" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxBrocolis" Content="Brócolis" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxCalabresa" Content="Calabresa" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxCamarao" Content="Camarão" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxCarneDeSol" Content="Carne de Sol" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxCatupiry" Content="Catupiry" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxCebola" Content="Cebola" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxChampignon" Content="Champignon" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxErvilha" Content="Ervilha" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxFrango" Content="Frango" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxLombo" Content="Lombo" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxManjericao" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,327,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxMilho" Content="Milho" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxMolhoDeTomate" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxOregano" Content="Orégano" HorizontalAlignment="Left" Margin="10,387,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxOvo" Content="Ovo" HorizontalAlignment="Left" Margin="10,407,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxPalmito" Content="Palmito" HorizontalAlignment="Left" Margin="10,427,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxPepperoni" Content="Pepperoni" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxPresunto" Content="Presunto" HorizontalAlignment="Left" Margin="10,467,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxQueijoMussarela" Content="Queijo Mussarela" HorizontalAlignment="Left" Margin="10,487,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxQueijoParmessao" Content="Queijo Parmesão" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxQueijoGorgonzola" Content="Queijo Gorgonzola" HorizontalAlignment="Left" Margin="10,527,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxQueijoProvolone" Content="Queijo Provolone" HorizontalAlignment="Left" Margin="10,547,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxQueijoCoalho" Content="Queijo Coalho" HorizontalAlignment="Left" Margin="10,567,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxRucula" Content="Rúcula" HorizontalAlignment="Left" Margin="10,587,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxTomate" Content="Tomate" HorizontalAlignment="Left" Margin="10,607,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxTomateCereja" Content="Tomate Cereja" HorizontalAlignment="Left" Margin="10,627,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBoxBacon" Content="Bacon" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Checked="CheckBoxBacon_Checked" Unchecked="CheckBoxBacon_Checked"/>
+                    <CheckBox x:Name="checkBoxBrocolis" Content="Brócolis" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Checked="CheckBoxBrocolis_Checked" Unchecked="CheckBoxBrocolis_Checked"/>
+                    <CheckBox x:Name="checkBoxCalabresa" Content="Calabresa" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Checked="CheckBoxCalabresa_Checked" Unchecked="CheckBoxCalabresa_Checked"/>
+                    <CheckBox x:Name="checkBoxCamarao" Content="Camarão" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Checked="CheckBoxCamarao_Checked" Unchecked="CheckBoxCamarao_Checked"/>
+                    <CheckBox x:Name="checkBoxCarneDeSol" Content="Carne de Sol" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Checked="CheckBoxCarneDeSol_Checked" Unchecked="CheckBoxCarneDeSol_Checked"/>
+                    <CheckBox x:Name="checkBoxCatupiry" Content="Catupiry" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Checked="CheckBoxCatupiry_Checked" Unchecked="CheckBoxCatupiry_Checked"/>
+                    <CheckBox x:Name="checkBoxCebola" Content="Cebola" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top" Checked="CheckBoxCebola_Checked" Unchecked="CheckBoxCebola_Checked"/>
+                    <CheckBox x:Name="checkBoxChampignon" Content="Champignon" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Checked="CheckBoxChampignon_Checked" Unchecked="CheckBoxChampignon_Checked"/>
+                    <CheckBox x:Name="checkBoxErvilha" Content="Ervilha" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Checked="CheckBoxErvilha_Checked" Unchecked="CheckBoxErvilha_Checked"/>
+                    <CheckBox x:Name="checkBoxFrango" Content="Frango" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Checked="CheckBoxFrango_Checked" Unchecked="CheckBoxFrango_Checked"/>
+                    <CheckBox x:Name="checkBoxLombo" Content="Lombo" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top" Checked="CheckBoxLombo_Checked" Unchecked="CheckBoxLombo_Checked"/>
+                    <CheckBox x:Name="checkBoxManjericao" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,327,0,0" VerticalAlignment="Top" Checked="CheckBoxManjericao_Checked" Unchecked="CheckBoxManjericao_Checked"/>
+                    <CheckBox x:Name="checkBoxMilho" Content="Milho" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Checked="CheckBoxMilho_Checked" Unchecked="CheckBoxMilho_Checked"/>
+                    <CheckBox x:Name="checkBoxMolhoDeTomate" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Checked="CheckBoxMolhoDeTomate_Checked" Unchecked="CheckBoxMolhoDeTomate_Checked"/>
+                    <CheckBox x:Name="checkBoxOregano" Content="Orégano" HorizontalAlignment="Left" Margin="10,387,0,0" VerticalAlignment="Top" Checked="CheckBoxOregano_Checked" Unchecked="CheckBoxOregano_Checked"/>
+                    <CheckBox x:Name="checkBoxOvo" Content="Ovo" HorizontalAlignment="Left" Margin="10,407,0,0" VerticalAlignment="Top" Checked="CheckBoxOvo_Checked" Unchecked="CheckBoxOvo_Checked"/>
+                    <CheckBox x:Name="checkBoxPalmito" Content="Palmito" HorizontalAlignment="Left" Margin="10,427,0,0" VerticalAlignment="Top" Checked="CheckBoxPalmito_Checked" Unchecked="CheckBoxPalmito_Checked"/>
+                    <CheckBox x:Name="checkBoxPepperoni" Content="Pepperoni" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top" Checked="CheckBoxPepperoni_Checked" Unchecked="CheckBoxPepperoni_Checked"/>
+                    <CheckBox x:Name="checkBoxPresunto" Content="Presunto" HorizontalAlignment="Left" Margin="10,467,0,0" VerticalAlignment="Top" Checked="CheckBoxPresunto_Checked" Unchecked="CheckBoxPresunto_Checked"/>
+                    <CheckBox x:Name="checkBoxQueijoCoalho" Content="Queijo Coalho" HorizontalAlignment="Left" Margin="10,487,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoCoalho_Checked" Unchecked="CheckBoxQueijoCoalho_Checked"/>
+                    <CheckBox x:Name="checkBoxQueijoGorgonzola" Content="Queijo Gorgonzola" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoGorgonzola_Checked" Unchecked="CheckBoxQueijoGorgonzola_Checked"/>
+                    <CheckBox x:Name="checkBoxQueijoMussarela" Content="Queijo Mussarela" HorizontalAlignment="Left" Margin="10,527,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoMussarela_Checked" Unchecked="CheckBoxQueijoMussarela_Checked"/>
+                    <CheckBox x:Name="checkBoxQueijoParmessao" Content="Queijo Parmessão" HorizontalAlignment="Left" Margin="10,547,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoParmessao_Checked" Unchecked="CheckBoxQueijoParmessao_Checked"/>
+                    <CheckBox x:Name="checkBoxQueijoProvolone" Content="Queijo Provolone" HorizontalAlignment="Left" Margin="10,567,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoProvolone_Checked" Unchecked="CheckBoxQueijoProvolone_Checked"/>
+                    <CheckBox x:Name="checkBoxRucula" Content="Rúcula" HorizontalAlignment="Left" Margin="10,587,0,0" VerticalAlignment="Top" Checked="CheckBoxRucula_Checked" Unchecked="CheckBoxRucula_Checked"/>
+                    <CheckBox x:Name="checkBoxTomate" Content="Tomate" HorizontalAlignment="Left" Margin="10,607,0,0" VerticalAlignment="Top" Checked="CheckBoxTomate_Checked" Unchecked="CheckBoxTomate_Checked"/>
+                    <CheckBox x:Name="checkBoxTomateCereja" Content="Tomate Cereja" HorizontalAlignment="Left" Margin="10,627,0,0" VerticalAlignment="Top" Checked="CheckBoxTomateCereja_Checked" Unchecked="CheckBoxTomateCereja_Checked"/>
                     <Button x:Name="buttonCadastrarPizza" Content="Cadastrar" HorizontalAlignment="Right" Margin="0,647,10,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarPizza_Click"/>
                 </Grid>
 
             </GroupBox>
+            <ListBox x:Name="listBoxPizzas" HorizontalAlignment="Left" Height="669" Margin="667,21,0,0" VerticalAlignment="Top" Width="319"/>
         </Grid>
         <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
 

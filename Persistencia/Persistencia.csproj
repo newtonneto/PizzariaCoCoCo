@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="PFuncionario.cs" />
     <Compile Include="PGerente.cs" />
+    <Compile Include="PPizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -34,6 +34,7 @@ namespace Pizzaria_CoCoCo
         NGerente admin = new NGerente();
         NFuncionario funcionario = new NFuncionario();
         NPizza pizza = new NPizza();
+        NCliente cliente = new NCliente();
         public MainWindow()
         {
             InitializeComponent();
@@ -1042,6 +1043,8 @@ namespace Pizzaria_CoCoCo
             }
             finally
             {
+                buttonCadastrarPizza.Visibility = Visibility.Visible;
+                buttonAtualizarCadastroPizza.Visibility = Visibility.Collapsed;
                 ResetaCadastroPizza();
             }
         }
@@ -1072,6 +1075,40 @@ namespace Pizzaria_CoCoCo
             catch (NullReferenceException erro)
             {
                 MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void ButtonCadastrarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MCliente novoCliente = new MCliente();
+                novoCliente.Nome = textBoxNomeCliente.Text;
+                novoCliente.Cpf = textBoxCpfCliente.Text;
+                if (radioButtonMasculinoCliente.IsChecked == true)
+                {
+                    novoCliente.Sexo = "Masculino";
+                }
+                if (radioButtonFemininoCliente.IsChecked == true)
+                {
+                    novoCliente.Sexo = "Feminino";
+                }
+                novoCliente.Nascimento = DateTime.Parse(textBoxDataDeNascimentoCliente.Text);
+
+                //Envia o objeto cliente criado para um objeto de classe funcionario
+                cliente.InserirCliente(novoCliente);
+            }
+            catch (CadastroIncompletoException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+            catch (Exception erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+            finally
+            {
+                ResetaCadastroFuncionario();
             }
         }
     }

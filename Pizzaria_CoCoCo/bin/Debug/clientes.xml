@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ArrayOfMCliente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MCliente>
+    <Nome>Yamato</Nome>
+    <Cpf>12030184</Cpf>
+    <Sexo>Masculino</Sexo>
+    <Nascimento>2003-03-03T00:00:00</Nascimento>
+  </MCliente>
+</ArrayOfMCliente>

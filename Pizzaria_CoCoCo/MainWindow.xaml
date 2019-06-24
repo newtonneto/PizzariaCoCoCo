@@ -18,7 +18,7 @@
             </Grid>
 
         </Grid>
-        <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Visible">
+        <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
             <GroupBox x:Name="groupBoxFuncionario" Header="Cadastrar Funcionário" HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="190" Margin="10,10,0,0" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
@@ -28,9 +28,9 @@
                     <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
                     <TextBox x:Name="textBoxNome" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
                     <TextBox x:Name="textBoxCpf" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-                    <TextBox x:Name="textBoxDataDeNascimento" HorizontalAlignment="Left" Height="23" Margin="140,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <RadioButton x:Name="radioButtonMasculino" Content="Masculino" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top"/>
                     <RadioButton x:Name="radioButtonFeminino" Content="Feminino" HorizontalAlignment="Left" Margin="140,66,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="textBoxDataDeNascimento" HorizontalAlignment="Left" Height="23" Margin="140,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="textBoxSenha" HorizontalAlignment="Left" Height="23" Margin="50,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
                     <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarFuncionario_Click"/>
                     <Button x:Name="buttonAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizar_Click" Visibility="Collapsed"/>
@@ -87,8 +87,27 @@
             <Button x:Name="buttonDesativarPizza" Content="Desativar" HorizontalAlignment="Left" Margin="831,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonDesativarPizza_Click"/>
             <Button x:Name="buttonRemoverPizza" Content="Remover" HorizontalAlignment="Left" Margin="911,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverPizza_Click"/>
         </Grid>
-        <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
-
+        <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Visible">
+            <GroupBox x:Name="groupBoxCliente" Header="Cadastrar Cliente" HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="319">
+                <Grid HorizontalAlignment="Left" Height="190" Margin="10,10,0,0" VerticalAlignment="Top" Width="303">
+                    <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="textBlock12" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" Text="Data de Nascimento:" VerticalAlignment="Top" RenderTransformOrigin="1.102,3.516"/>
+                    <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Sexo:" VerticalAlignment="Top"/>
+                    <TextBox x:Name="textBoxNomeCliente" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+                    <TextBox x:Name="textBoxCpfCliente" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+                    <RadioButton x:Name="radioButtonMasculinoCliente" Content="Masculino" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="radioButtonFemininoCliente" Content="Feminino" HorizontalAlignment="Left" Margin="140,66,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="textBoxDataDeNascimentoCliente" HorizontalAlignment="Left" Height="23" Margin="140,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="buttonCadastrarCliente" Content="Cadastrar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="ButtonCadastrarCliente_Click"/>
+                    <Button x:Name="buttonAtualizarCadastroCliente" Content="Atualizar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Visibility="Collapsed"/>
+                </Grid>
+            </GroupBox>
+            <ListBox x:Name="listBoxClientes" HorizontalAlignment="Left" Height="462" Margin="10,228,0,0" VerticalAlignment="Top" Width="319"/>
+            <Button x:Name="buttonListarClientes" Content="Listar" HorizontalAlignment="Left" Margin="10,695,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="buttonAtualizarCliente" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="buttonRemoverCliente" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="buttonDesativarCliente" Content="Desativar" HorizontalAlignment="Left" Margin="174,695,0,0" VerticalAlignment="Top" Width="75"/>
         </Grid>
 
     </Grid>

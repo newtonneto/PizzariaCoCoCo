@@ -31,6 +31,8 @@ namespace Pizzaria_CoCoCo
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Cria objeto dos tipos de negócio para realizar os diversos tipos de operações com os objetos do tipo modelo relacionado
+        //Ex: o objeto funcionario realiza as operação de cadastror, alteração e remoção de objetos MFuncionario.
         NGerente admin = new NGerente();
         NFuncionario funcionario = new NFuncionario();
         NPizza pizza = new NPizza();
@@ -38,12 +40,14 @@ namespace Pizzaria_CoCoCo
         public MainWindow()
         {
             InitializeComponent();
-            atualizaListBoxFuncionarios();
-            atualizaListBoxPizzas();
+            //atualizaListBoxFuncionarios();
+            //atualizaListBoxPizzas();
         }
 
+        //Função para atualizar o ListBox de Funcionários
         private void atualizaListBoxFuncionarios()
         {
+            //Usa o objeto funcionario para receber a lista de funcionários cadastrados
             List<MFuncionario> listaDeFuncionarios = funcionario.ListarFuncionarios();
 
             listBoxFuncionarios.Items.Clear();
@@ -53,8 +57,10 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Função para atualizar o ListBox de Pizzas
         private void atualizaListBoxPizzas()
         {
+            //Usa o objeto pizza para receber a lista de pizzas cadastradas
             List<MPizza> listaDePizzas = pizza.ListarPizzas();
 
             listBoxPizzas.Items.Clear();
@@ -64,6 +70,9 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+
+        //Ativa as textBoxes que podem estar desativadas, atualmente só a textBoxCpf é desativada na hora de alterar um cadastro, esse metodo precisa ser chamado em todos os botões de cadastro
+        //de funcionário para reativar o campo de CPF
         private void ativaTextBoxes()
         {
             textBoxNome.IsEnabled = true;
@@ -124,15 +133,21 @@ namespace Pizzaria_CoCoCo
             atualizaListBoxPizzas();
         }
 
+
+        //Metodo de Login no sistema
         private void ButtonEntrarSistema_Click(object sender, RoutedEventArgs e)
         {
+            //Primeiro verifica se as credenciais passadas são de gerente, no caso, atualmente só existe uma credencia de gerente [001 / 666]
             if (admin.autorizaLoginGerente(textBoxLoginCpf.Text, textBoxLoginSenha.Text))
             {
+                //Esconde o grid de login e torna visível o grid de gerente
                 gridLogin.Visibility = Visibility.Collapsed;
                 gridGerente.Visibility = Visibility.Visible;
             }
+            //Se não passar na condição anterior ele tenta logar como funcionário
             else if (funcionario.autorizaLoginFuncionario(textBoxLoginCpf.Text, textBoxLoginSenha.Text))
             {
+                //Esconde o grid de login e torna visível o grid de funcionário
                 gridLogin.Visibility = Visibility.Collapsed;
                 gridFuncionario.Visibility = Visibility.Visible;
             }
@@ -142,12 +157,14 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Metodo para cadastrar funcionário
         private void buttonCadastrarFuncionario_Click(object sender, RoutedEventArgs e)
         {
             ativaTextBoxes();
             //Cria um novo funcionario pegando as informações contidas nas TextBoxes
             try
             {
+                //Criar um objeto do tipo MFuncionario e atribui a ele o que foi digitado nos campos de cadastro (nome, CPF, sexo e etc)
                 MFuncionario novoFuncionario = new MFuncionario();
                 novoFuncionario.Nome = textBoxNome.Text;
                 novoFuncionario.Cpf = textBoxCpf.Text;
@@ -163,7 +180,7 @@ namespace Pizzaria_CoCoCo
                 novoFuncionario.Senha = textBoxSenha.Text;
                 novoFuncionario.Ativo = true;
 
-                //Envia o objeto funcionario criado para um objeto de classe gerente
+                //Envia o objeto funcionario criado para um objeto funcionario, que irá tratar o mesmo
                 funcionario.InserirFuncionario(novoFuncionario);
             }
             catch (CadastroIncompletoException erro)
@@ -180,29 +197,26 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Apenas chama a função implementada para atualizar o ListBox de funcionários
         private void buttonListarFuncionarios_Click(object sender, RoutedEventArgs e)
         {
-            /*List<MFuncionario> listaDeFuncionarios = admin.ListarFuncionarios();
-
-            listBoxFuncionarios.Items.Clear();
-            foreach(MFuncionario f in listaDeFuncionarios)
-            {
-                listBoxFuncionarios.Items.Add(f);
-            }*/
             atualizaListBoxFuncionarios();
         }
 
+        //Metodo para atualizar o cadastro de um funcionário previamente cadastrado, primeira parte
         private void buttonAtualizarFuncionario_Click(object sender, RoutedEventArgs e)
         {
             ativaTextBoxes();
+            //Esconde o botão "cadastrar" e revela o botão "atualizar" (no groupbox de cadastro)
             buttonCadastrar.Visibility = Visibility.Collapsed;
             buttonAtualizar.Visibility = Visibility.Visible;
             try
             {
+                //Recupera um objeto presente na list box e preenche os campos de cadastro com as informações do mesmo
                 MFuncionario funcionarioDesatualizado = (MFuncionario)listBoxFuncionarios.SelectedItem;
                 textBoxNome.Text = funcionarioDesatualizado.Nome;
                 textBoxCpf.Text = funcionarioDesatualizado.Cpf;
-                textBoxCpf.IsEnabled = false; //Antes de implementar, encontrar uma forma de reativar sem procisar ficar chamando o metodo em todos os botões
+                textBoxCpf.IsEnabled = false; //Antes de implementar, encontrar uma forma de reativar sem procisar ficar chamando o metodo ativaTextBoxes() em todos os botões
                 if (funcionarioDesatualizado.Sexo.Equals("Masculino"))
                 {
                     radioButtonMasculino.IsChecked = true;
@@ -221,12 +235,13 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Metodo para atualizar o cadastro de um funcionário previamente cadastrado, segunda parte
         private void buttonAtualizar_Click(object sender, RoutedEventArgs e)
         {
             ativaTextBoxes();
-            //Cria um novo funcionario pegando as informações contidas nas TextBoxes
             try
             {
+                //Criar um objeto do tipo MFuncionario e atribui a ele o que está presente nos campos de cadastro (nome, CPF, sexo e etc)
                 MFuncionario funcionarioAtualizado = new MFuncionario();
                 funcionarioAtualizado.Nome = textBoxNome.Text;
                 funcionarioAtualizado.Cpf = textBoxCpf.Text;
@@ -241,7 +256,7 @@ namespace Pizzaria_CoCoCo
                 funcionarioAtualizado.Nascimento = DateTime.Parse(textBoxDataDeNascimento.Text);
                 funcionarioAtualizado.Senha = textBoxSenha.Text;
 
-                //Envia o objeto funcionario criado para um objeto de classe gerente
+                //Envia o objeto funcionario criado para um objeto funcionario, que irá tratar o mesmo
                 funcionario.AtualizarFuncionario(funcionarioAtualizado);
             }
             catch (CadastroIncompletoException erro)
@@ -267,12 +282,16 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Metodo para remover funcionário
         private void buttonRemoverFuncionario_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                //Recupera um objeto presente na list box
                 MFuncionario funcionarioRemover = (MFuncionario)listBoxFuncionarios.SelectedItem;
+                //Envia o objeto para o metodo de remoção presente no objeto funcionario
                 funcionario.DeletarFuncionario(funcionarioRemover);
+                //Chama a função responsável por atualizar o conteudo do listbox de funcionários
                 atualizaListBoxFuncionarios();
             }
             catch (NullReferenceException erro)
@@ -1093,7 +1112,7 @@ namespace Pizzaria_CoCoCo
                 {
                     novoCliente.Sexo = "Feminino";
                 }
-                novoCliente.Nascimento = DateTime.Parse(textBoxDataDeNascimentoCliente.Text);
+                novoCliente.Nascimento = DateTime.Parse(textBoxDataDeNascimentoCliente.Text); 
 
                 //Envia o objeto cliente criado para um objeto de classe funcionario
                 cliente.InserirCliente(novoCliente);

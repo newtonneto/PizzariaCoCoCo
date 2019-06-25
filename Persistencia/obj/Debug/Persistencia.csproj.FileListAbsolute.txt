@@ -7,3 +7,12 @@ D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Persistencia\obj\Debug\
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Persistencia\obj\Debug\Persistencia.dll
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Modelo.dll
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Modelo.pdb
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.pdb

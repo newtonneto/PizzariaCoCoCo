@@ -6,15 +6,26 @@
         xmlns:local="clr-namespace:Pizzaria_CoCoCo"
         mc:Ignorable="d"
         Title="Pizzaria CoCoCo" Height="768" Width="1024">
+    <Window.Resources>
+        <Style x:Key="myBG" TargetType="Grid">
+            <Setter Property="Background" Value="#f9f960"/>
+        </Style>
+        <Style x:Key="myButtonPadrao" TargetType="Button">
+            <Setter Property="Background" Value="#ffa20a"/>
+            <Setter Property="BorderBrush" Value="White"/>
+
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
-            <TextBlock x:Name="textBlock5" HorizontalAlignment="Center" Margin="0,106,0,0" TextWrapping="Wrap" Text="LOGIN" VerticalAlignment="Top" FontSize="48"/>
+        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Visible">
+            <TextBlock x:Name="textBlock5" HorizontalAlignment="Center" Margin="466,170,449,0" TextWrapping="Wrap" Text="LOGIN" VerticalAlignment="Top" FontSize="24" FontFamily="Microsoft YaHei UI" Width="81"/>
             <Grid HorizontalAlignment="Center" Height="93" Margin="370,250,370,0" VerticalAlignment="Top" Width="256">
                 <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
                 <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
                 <TextBox x:Name="textBoxLoginCpf" HorizontalAlignment="Left" Height="23" Margin="50,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
                 <TextBox x:Name="textBoxLoginSenha" HorizontalAlignment="Left" Height="23" Margin="50,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-                <Button x:Name="button" Content="Entrar" HorizontalAlignment="Left" Margin="175,65,0,0" VerticalAlignment="Top" Width="75" Click="ButtonEntrarSistema_Click"/>
+                <Button x:Name="button" Content="Entrar" HorizontalAlignment="Left" Margin="159,65,0,0" VerticalAlignment="Top" Width="91" Click="ButtonEntrarSistema_Click" Style="{StaticResource myButtonPadrao}" Height="28"/>
             </Grid>
 
         </Grid>
@@ -87,7 +98,7 @@
             <Button x:Name="buttonDesativarPizza" Content="Desativar" HorizontalAlignment="Left" Margin="831,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonDesativarPizza_Click"/>
             <Button x:Name="buttonRemoverPizza" Content="Remover" HorizontalAlignment="Left" Margin="911,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverPizza_Click"/>
         </Grid>
-        <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Visible">
+        <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
             <GroupBox x:Name="groupBoxCliente" Header="Cadastrar Cliente" HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="190" Margin="10,10,0,0" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
@@ -111,4 +122,5 @@
         </Grid>
 
     </Grid>
+
 </Window>

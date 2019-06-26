@@ -1126,6 +1126,24 @@ namespace Pizzaria_CoCoCo
         private void ButtonListarClientes_Click(object sender, RoutedEventArgs e)
         {
             //Apenas chama a função implementada para atualizar o ListBox de clientes
+            atualizaListBoxClientes();
+        }
+
+        private void ButtonRemoverCliente_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Recupera um objeto presente na list box
+                MCliente clienteRemover = (MCliente)listBoxClientes.SelectedItem;
+                //Envia o objeto para o metodo de remoção presente no objeto cliente
+                cliente.DeletarCliente(clienteRemover);
+                //Chama a função responsável por atualizar o conteudo do listbox de clientes
+                atualizaListBoxClientes();
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
         }
     }
 }

@@ -117,7 +117,7 @@
             <ListBox x:Name="listBoxClientes" HorizontalAlignment="Left" Height="462" Margin="10,228,0,0" VerticalAlignment="Top" Width="319"/>
             <Button x:Name="buttonListarClientes" Content="Listar" HorizontalAlignment="Left" Margin="10,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonListarClientes_Click"/>
             <Button x:Name="buttonAtualizarCliente" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarCliente_Click"/>
-            <Button x:Name="buttonRemoverCliente" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="buttonRemoverCliente" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverCliente_Click"/>
         </Grid>
 
     </Grid>

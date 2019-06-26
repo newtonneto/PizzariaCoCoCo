@@ -5,5 +5,12 @@
     <Cpf>12030184</Cpf>
     <Sexo>Masculino</Sexo>
     <Nascimento>2003-03-03T00:00:00</Nascimento>
+    <Pedidos />
+  </MCliente>
+  <MCliente>
+    <Nome>solid snake</Nome>
+    <Cpf>1234254532</Cpf>
+    <Sexo>Masculino</Sexo>
+    <Nascimento>2001-01-01T00:00:00</Nascimento>
   </MCliente>
 </ArrayOfMCliente>

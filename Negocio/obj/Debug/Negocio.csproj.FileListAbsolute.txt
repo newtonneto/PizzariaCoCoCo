@@ -20,3 +20,14 @@ C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negoc
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.dll
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Negocio.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Negocio.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Modelo.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Persistencia.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Modelo.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Persistencia.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.pdb

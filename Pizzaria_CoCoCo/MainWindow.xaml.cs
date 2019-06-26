@@ -70,17 +70,148 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Função para atualizar o ListBox de Clientes
+        private void atualizaListBoxClientes()
+        {
+            //Usa o objeto pizza para receber a lista de pizzas cadastradas
+            List<MCliente> listaDeClientes = cliente.ListarClientes();
+
+            listBoxClientes.Items.Clear();
+            foreach (MCliente c in listaDeClientes)
+            {
+                listBoxClientes.Items.Add(c);
+            }
+        }
+
+        private List<string> IngredientesSelecionados()
+        {
+            //Lista para armazenar todos os ingredientes da pizza
+            List<string> ingredientes = new List<string>();
+
+            //Verifica quais checkboxes estão selecionadas, as que estiverem teram uma string relacionada adicionada a lista de ingredientes
+            if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Azeitona");
+            }
+            if (checkBoxBacon.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Bacon");
+            }
+            if (checkBoxBrocolis.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Brócolis");
+            }
+            if (checkBoxCalabresa.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Calabresa");
+            }
+            if (checkBoxCamarao.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Camarão");
+            }
+            if (checkBoxCarneDeSol.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Carne de Sol");
+            }
+            if (checkBoxCatupiry.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Catupiry");
+            }
+            if (checkBoxCebola.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Cebola");
+            }
+            if (checkBoxChampignon.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Champignon");
+            }
+            if (checkBoxErvilha.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Ervilha");
+            }
+            if (checkBoxFrango.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Frango");
+            }
+            if (checkBoxLombo.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Lombo");
+            }
+            if (checkBoxManjericao.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Manjericão");
+            }
+            if (checkBoxMilho.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Milho");
+            }
+            if (checkBoxMolhoDeTomate.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Molho de Tomate");
+            }
+            if (checkBoxOregano.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Orégano");
+            }
+            if (checkBoxOvo.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Ovo");
+            }
+            if (checkBoxPalmito.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Palmito");
+            }
+            if (checkBoxPepperoni.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Pepperoni");
+            }
+            if (checkBoxPresunto.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Presunto");
+            }
+            if (checkBoxQueijoCoalho.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Queijo Coalho");
+            }
+            if (checkBoxQueijoGorgonzola.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Queijo Gorgonzola");
+            }
+            if (checkBoxQueijoMussarela.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Queijo Mussarela");
+            }
+            if (checkBoxQueijoParmessao.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Queijo Parmessão");
+            }
+            if (checkBoxQueijoProvolone.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Queijo Provolone");
+            }
+            if (checkBoxRucula.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Rúcula");
+            }
+            if (checkBoxTomate.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Tomate");
+            }
+            if (checkBoxTomateCereja.IsChecked.GetValueOrDefault())
+            {
+                ingredientes.Add("Tomate Cereja");
+            }
+
+            return ingredientes;
+        }
+
 
         //Ativa as textBoxes que podem estar desativadas, atualmente só a textBoxCpf é desativada na hora de alterar um cadastro, esse metodo precisa ser chamado em todos os botões de cadastro
         //de funcionário para reativar o campo de CPF
         private void ativaTextBoxes()
         {
-            textBoxNome.IsEnabled = true;
             textBoxCpf.IsEnabled = true;
-            radioButtonMasculino.IsEnabled = true;
-            radioButtonFeminino.IsEnabled = true;
-            textBoxDataDeNascimento.IsEnabled = true;
-            textBoxSenha.IsEnabled = true;
+            textBoxCpfCliente.IsEnabled = true;
 
         }
 
@@ -133,6 +264,19 @@ namespace Pizzaria_CoCoCo
             atualizaListBoxPizzas();
         }
 
+        //Reseta todos os campos do cadastro de cliente
+        private void ResetaCadastroCliente()
+        {
+            textBoxNomeCliente.Text = String.Empty;
+            textBoxCpfCliente.Text = String.Empty;
+            radioButtonMasculinoCliente.IsChecked = false;
+            radioButtonFemininoCliente.IsChecked = false;
+            textBoxDataDeNascimentoCliente.Text = String.Empty;
+            buttonCadastrarCliente.Visibility = Visibility.Visible;
+            buttonAtualizarCadastroCliente.Visibility = Visibility.Collapsed;
+            atualizaListBoxClientes();
+        }
+
 
         //Metodo de Login no sistema
         private void ButtonEntrarSistema_Click(object sender, RoutedEventArgs e)
@@ -143,6 +287,8 @@ namespace Pizzaria_CoCoCo
                 //Esconde o grid de login e torna visível o grid de gerente
                 gridLogin.Visibility = Visibility.Collapsed;
                 gridGerente.Visibility = Visibility.Visible;
+                atualizaListBoxFuncionarios();
+                atualizaListBoxPizzas();
             }
             //Se não passar na condição anterior ele tenta logar como funcionário
             else if (funcionario.autorizaLoginFuncionario(textBoxLoginCpf.Text, textBoxLoginSenha.Text))
@@ -150,6 +296,7 @@ namespace Pizzaria_CoCoCo
                 //Esconde o grid de login e torna visível o grid de funcionário
                 gridLogin.Visibility = Visibility.Collapsed;
                 gridFuncionario.Visibility = Visibility.Visible;
+                atualizaListBoxClientes();
             }
             else
             {
@@ -206,7 +353,6 @@ namespace Pizzaria_CoCoCo
         //Metodo para atualizar o cadastro de um funcionário previamente cadastrado, primeira parte
         private void buttonAtualizarFuncionario_Click(object sender, RoutedEventArgs e)
         {
-            ativaTextBoxes();
             //Esconde o botão "cadastrar" e revela o botão "atualizar" (no groupbox de cadastro)
             buttonCadastrar.Visibility = Visibility.Collapsed;
             buttonAtualizar.Visibility = Visibility.Visible;
@@ -238,7 +384,6 @@ namespace Pizzaria_CoCoCo
         //Metodo para atualizar o cadastro de um funcionário previamente cadastrado, segunda parte
         private void buttonAtualizar_Click(object sender, RoutedEventArgs e)
         {
-            ativaTextBoxes();
             try
             {
                 //Criar um objeto do tipo MFuncionario e atribui a ele o que está presente nos campos de cadastro (nome, CPF, sexo e etc)
@@ -269,16 +414,8 @@ namespace Pizzaria_CoCoCo
             }
             finally
             {
-                //Limpa as TextBoxes
-                textBoxNome.Text = String.Empty;
-                textBoxCpf.Text = String.Empty;
-                radioButtonMasculino.IsChecked = false;
-                radioButtonFeminino.IsChecked = false;
-                textBoxDataDeNascimento.Text = String.Empty;
-                textBoxSenha.Text = String.Empty;
-                buttonCadastrar.Visibility = Visibility.Visible;
-                buttonAtualizar.Visibility = Visibility.Collapsed;
-                atualizaListBoxFuncionarios();
+                ResetaCadastroFuncionario();
+                ativaTextBoxes();
             }
         }
 
@@ -300,12 +437,16 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Metodo para desativar funcionário
         private void buttonDesativarFuncionario_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                //Recupera um objeto presente na list box
                 MFuncionario funcionarioEstado = (MFuncionario)listBoxFuncionarios.SelectedItem;
+                //Altera o seu atributo Ativo para false;
                 funcionarioEstado.Ativo = false;
+                //Envia o funcionario atualizado para o metodo responsável por salvar essa atualização
                 funcionario.AtualizarFuncionario(funcionarioEstado);
                 atualizaListBoxFuncionarios();
             }
@@ -318,131 +459,16 @@ namespace Pizzaria_CoCoCo
         //Cria um novo delicioso sabor de pizza uhmm uhmm uhmm
         private void buttonCadastrarPizza_Click(object sender, RoutedEventArgs e)
         {
-            //Lista para armazenar todos os ingredientes da pizza
-            List<string> ingredientes = new List<string>();
-
             try
             {
+                //Criar um objeto do tipo MPizza e atribui a ele o que está presente nos campos de cadastro
                 MPizza novaPizza = new MPizza();
                 novaPizza.Tipo = textBoxNomePizza.Text;
-
-                if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Azeitona");
-                }
-                if (checkBoxBacon.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Bacon");
-                }
-                if (checkBoxBrocolis.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Brócolis");
-                }
-                if (checkBoxCalabresa.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Calabresa");
-                }
-                if (checkBoxCamarao.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Camarão");
-                }
-                if (checkBoxCarneDeSol.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Carne de Sol");
-                }
-                if (checkBoxCatupiry.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Catupiry");
-                }
-                if (checkBoxCebola.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Cebola");
-                }
-                if (checkBoxChampignon.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Champignon");
-                }
-                if (checkBoxErvilha.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Ervilha");
-                }
-                if (checkBoxFrango.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Frango");
-                }
-                if (checkBoxLombo.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Lombo");
-                }
-                if (checkBoxManjericao.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Manjericão");
-                }
-                if (checkBoxMilho.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Milho");
-                }
-                if (checkBoxMolhoDeTomate.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Molho de Tomate");
-                }
-                if (checkBoxOregano.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Orégano");
-                }
-                if (checkBoxOvo.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Ovo");
-                }
-                if (checkBoxPalmito.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Palmito");
-                }
-                if (checkBoxPepperoni.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Pepperoni");
-                }
-                if (checkBoxPresunto.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Presunto");
-                }
-                if (checkBoxQueijoCoalho.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Coalho");
-                }
-                if (checkBoxQueijoGorgonzola.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Gorgonzola");
-                }
-                if (checkBoxQueijoMussarela.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Mussarela");
-                }
-                if (checkBoxQueijoParmessao.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Parmessão");
-                }
-                if (checkBoxQueijoProvolone.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Provolone");
-                }
-                if (checkBoxRucula.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Rúcula");
-                }
-                if (checkBoxTomate.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Tomate");
-                }
-                if (checkBoxTomateCereja.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Tomate Cereja");
-                }
-
-                novaPizza.Ingredientes = ingredientes;
+                novaPizza.Ingredientes = IngredientesSelecionados();
                 novaPizza.Preco = Double.Parse(textBoxPreco.Text);
                 novaPizza.Ativo = true;
 
+                //Envia o objeto MPizza criado para um objeto pizza, que irá tratar o mesmo
                 pizza.InserirPizza(novaPizza);
             }
             catch (CadastroIncompletoException erro)
@@ -455,6 +481,7 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //A seguir ficam os metodos responsaveis por alterar o preço na textBoxPreco, selecionar adicionar valor, tirar a seleção reduz o valor.
         private void CheckBoxAzeitona_Checked(object sender, RoutedEventArgs e)
         {
             if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
@@ -796,17 +823,19 @@ namespace Pizzaria_CoCoCo
             atualizaListBoxPizzas();
         }
 
+        //Metodo para atualizar o cadastro de uma pizza previamente cadastrado, primeira parte
         private void ButtonAtualizarPizza_Click(object sender, RoutedEventArgs e)
         {
             buttonCadastrarPizza.Visibility = Visibility.Collapsed;
             buttonAtualizarCadastroPizza.Visibility = Visibility.Visible;
             try
             {
+                //Recupera um objeto presente na list box
                 MPizza pizzaDesatualizada = (MPizza)listBoxPizzas.SelectedItem;
                 textBoxNomePizza.Text = pizzaDesatualizada.Tipo;
                 //textBoxPreco.Text = pizzaDesatualizada.Preco.ToString();
 
-                //Ativa as checkbox de ingredientes
+                //Ativa as checkbox dos ingredientes do objeto recuperado da listbox de pizzas
                 foreach (string ingrediente in pizzaDesatualizada.Ingredientes)
                 {
                     if (ingrediente == "Azeitona")
@@ -929,131 +958,18 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Metodo para atualizar o cadastro de uma pizza previamente cadastrado, segunda parte
         private void ButtonAtualizarCadastroPizza_Click(object sender, RoutedEventArgs e)
         {
-            List<string> ingredientes = new List<string>();
-
             try
             {
+                //Criar um objeto do tipo MPizza e atribui a ele o que está presente nos campos de cadastro
                 MPizza pizzaAtualizada = new MPizza();
                 pizzaAtualizada.Tipo = textBoxNomePizza.Text;
-
-                if (checkBoxAzeitona.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Azeitona");
-                }
-                if (checkBoxBacon.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Bacon");
-                }
-                if (checkBoxBrocolis.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Brócolis");
-                }
-                if (checkBoxCalabresa.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Calabresa");
-                }
-                if (checkBoxCamarao.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Camarão");
-                }
-                if (checkBoxCarneDeSol.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Carne de Sol");
-                }
-                if (checkBoxCatupiry.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Catupiry");
-                }
-                if (checkBoxCebola.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Cebola");
-                }
-                if (checkBoxChampignon.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Champignon");
-                }
-                if (checkBoxErvilha.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Ervilha");
-                }
-                if (checkBoxFrango.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Frango");
-                }
-                if (checkBoxLombo.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Lombo");
-                }
-                if (checkBoxManjericao.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Manjericão");
-                }
-                if (checkBoxMilho.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Milho");
-                }
-                if (checkBoxMolhoDeTomate.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Molho de Tomate");
-                }
-                if (checkBoxOregano.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Orégano");
-                }
-                if (checkBoxOvo.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Ovo");
-                }
-                if (checkBoxPalmito.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Palmito");
-                }
-                if (checkBoxPepperoni.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Pepperoni");
-                }
-                if (checkBoxPresunto.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Presunto");
-                }
-                if (checkBoxQueijoCoalho.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Coalho");
-                }
-                if (checkBoxQueijoGorgonzola.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Gorgonzola");
-                }
-                if (checkBoxQueijoMussarela.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Mussarela");
-                }
-                if (checkBoxQueijoParmessao.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Parmessão");
-                }
-                if (checkBoxQueijoProvolone.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Queijo Provolone");
-                }
-                if (checkBoxRucula.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Rúcula");
-                }
-                if (checkBoxTomate.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Tomate");
-                }
-                if (checkBoxTomateCereja.IsChecked.GetValueOrDefault())
-                {
-                    ingredientes.Add("Tomate Cereja");
-                }
-
-                pizzaAtualizada.Ingredientes = ingredientes;
+                pizzaAtualizada.Ingredientes = IngredientesSelecionados();
                 pizzaAtualizada.Preco = Double.Parse(textBoxPreco.Text);
 
+                //Envia o objeto MPizza criado para um objeto pizza, que irá tratar o mesmo
                 pizza.AtualizarPizza(pizzaAtualizada);
             }
             catch (CadastroIncompletoException erro)
@@ -1068,12 +984,16 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Metodo para desativar pizza
         private void ButtonDesativarPizza_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                //Recupera um objeto presente na list box
                 MPizza pizzaEstado = (MPizza)listBoxPizzas.SelectedItem;
+                //Altera o seu atributo Ativo para false;
                 pizzaEstado.Ativo = false;
+                //Envia a pizza atualizada para o metodo responsável por salvar essa atualização
                 pizza.AtualizarPizza(pizzaEstado);
                 atualizaListBoxPizzas();
             }
@@ -1083,11 +1003,14 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Metodo para remover pizza
         private void ButtonRemoverPizza_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                //Recupera um objeto presente na list box
                 MPizza pizzaRemover = (MPizza)listBoxPizzas.SelectedItem;
+                //Envia o objeto para o metodo de remoção presente no objeto pizza
                 pizza.DeletarPizza(pizzaRemover.Tipo);
                 atualizaListBoxPizzas();
             }
@@ -1097,10 +1020,13 @@ namespace Pizzaria_CoCoCo
             }
         }
 
+        //Metodo para cadastrar cliente
         private void ButtonCadastrarCliente_Click(object sender, RoutedEventArgs e)
         {
+            ativaTextBoxes();
             try
             {
+                //Criar um objeto do tipo MCliente e atribui a ele o que está presente nos campos de cadastro
                 MCliente novoCliente = new MCliente();
                 novoCliente.Nome = textBoxNomeCliente.Text;
                 novoCliente.Cpf = textBoxCpfCliente.Text;
@@ -1112,7 +1038,7 @@ namespace Pizzaria_CoCoCo
                 {
                     novoCliente.Sexo = "Feminino";
                 }
-                novoCliente.Nascimento = DateTime.Parse(textBoxDataDeNascimentoCliente.Text); 
+                novoCliente.Nascimento = DateTime.Parse(textBoxDataDeNascimentoCliente.Text);
 
                 //Envia o objeto cliente criado para um objeto de classe funcionario
                 cliente.InserirCliente(novoCliente);
@@ -1127,8 +1053,79 @@ namespace Pizzaria_CoCoCo
             }
             finally
             {
-                ResetaCadastroFuncionario();
+                ResetaCadastroCliente();
             }
+        }
+
+        //Metodo para atualizar o cadastro de um cliente previamente cadastrado, primeira parte
+        private void buttonAtualizarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            //Esconde o botão "cadastrar" e revela o botão "atualizar" (no groupbox de cadastro)
+            buttonCadastrarCliente.Visibility = Visibility.Collapsed;
+            buttonAtualizarCadastroCliente.Visibility = Visibility.Visible;
+            try
+            {
+                //Recupera um objeto presente na list box e preenche os campos de cadastro com as informações do mesmo
+                MCliente clienteDesatualizado = (MCliente)listBoxClientes.SelectedItem;
+                textBoxNomeCliente.Text = clienteDesatualizado.Nome;
+                textBoxCpfCliente.Text = clienteDesatualizado.Cpf;
+                textBoxCpfCliente.IsEnabled = false; //Antes de implementar, encontrar uma forma de reativar sem procisar ficar chamando o metodo ativaTextBoxes() em todos os botões
+                if (clienteDesatualizado.Sexo.Equals("Masculino"))
+                {
+                    radioButtonMasculinoCliente.IsChecked = true;
+                }
+                else
+                {
+                    radioButtonFemininoCliente.IsChecked = true;
+                }
+                textBoxDataDeNascimentoCliente.Text = clienteDesatualizado.Nascimento.ToString();
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        //Metodo para atualizar o cadastro de um cliente previamente cadastrado, segunda parte
+        private void buttonAtualizarCadastroCliente_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Criar um objeto do tipo MCliente e atribui a ele o que está presente nos campos de cadastro (nome, CPF, sexo e etc)
+                MCliente clienteAtualizado = new MCliente();
+                clienteAtualizado.Nome = textBoxNomeCliente.Text;
+                clienteAtualizado.Cpf = textBoxCpfCliente.Text;
+                if (radioButtonMasculinoCliente.IsChecked == true)
+                {
+                    clienteAtualizado.Sexo = "Masculino";
+                }
+                if (radioButtonFemininoCliente.IsChecked == true)
+                {
+                    clienteAtualizado.Sexo = "Feminino";
+                }
+                clienteAtualizado.Nascimento = DateTime.Parse(textBoxDataDeNascimentoCliente.Text);
+
+                //Envia o objeto MCliente criado para um objeto cliente, que irá tratar o mesmo
+                cliente.AtualizarCliente(clienteAtualizado);
+            }
+            catch (CadastroIncompletoException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+            catch (Exception erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+            finally
+            {
+                ResetaCadastroCliente();
+                ativaTextBoxes();
+            }
+        }
+
+        private void ButtonListarClientes_Click(object sender, RoutedEventArgs e)
+        {
+            //Apenas chama a função implementada para atualizar o ListBox de clientes
         }
     }
 }

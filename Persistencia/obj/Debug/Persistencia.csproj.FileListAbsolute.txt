@@ -16,3 +16,12 @@ C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Persistencia.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Persistencia.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Modelo.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\bin\Debug\Modelo.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Persistencia\obj\Debug\Persistencia.pdb

@@ -10,3 +10,9 @@ C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.dll
 C:\Users\paull\OneDrive\Documentos\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Modelo\bin\Debug\Modelo.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Modelo\bin\Debug\Modelo.pdb
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.dll
+D:\Izzy_New2\GitHub\PizzariaCoCoCo\Modelo\obj\Debug\Modelo.pdb

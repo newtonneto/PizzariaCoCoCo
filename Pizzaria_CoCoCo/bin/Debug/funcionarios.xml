@@ -17,6 +17,14 @@
     <Ativo>true</Ativo>
   </MFuncionario>
   <MFuncionario>
+    <Nome>teste</Nome>
+    <Cpf>123456</Cpf>
+    <Sexo>Feminino</Sexo>
+    <Nascimento>2001-01-01T00:00:00</Nascimento>
+    <Senha>88</Senha>
+    <Ativo>false</Ativo>
+  </MFuncionario>
+  <MFuncionario>
     <Nome>rafinha cococo</Nome>
     <Cpf>1</Cpf>
     <Sexo>Feminino</Sexo>
@@ -25,11 +33,11 @@
     <Ativo>true</Ativo>
   </MFuncionario>
   <MFuncionario>
-    <Nome>teste</Nome>
-    <Cpf>123456</Cpf>
+    <Nome>liquid snake</Nome>
+    <Cpf>245802750</Cpf>
     <Sexo>Feminino</Sexo>
     <Nascimento>2001-01-01T00:00:00</Nascimento>
-    <Senha>88</Senha>
-    <Ativo>false</Ativo>
+    <Senha>54321</Senha>
+    <Ativo>true</Ativo>
   </MFuncionario>
 </ArrayOfMFuncionario>

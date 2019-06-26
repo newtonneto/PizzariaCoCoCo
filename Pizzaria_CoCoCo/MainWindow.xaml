@@ -8,28 +8,45 @@
         Title="Pizzaria CoCoCo" Height="768" Width="1024">
     <Window.Resources>
         <Style x:Key="myBG" TargetType="Grid">
-            <Setter Property="Background" Value="#f9f960"/>
+            <Setter Property="Background" Value="#ffd397"/>
         </Style>
         <Style x:Key="myButtonPadrao" TargetType="Button">
             <Setter Property="Background" Value="#ffa20a"/>
+            <Setter Property="BorderBrush" Value="#ffa20a"/>
+        </Style>
+        <Style x:Key="myButtonRemove" TargetType="Button">
+            <Setter Property="Background" Value="#c1200f"/>
             <Setter Property="BorderBrush" Value="White"/>
-
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="myTextBoxPadrao" TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="#FFF1DF"/>
+            <Setter Property="Background" Value="#FFF1DF"/>
+        </Style>
+        <Style x:Key="myListBoxPadrao" TargetType="ListBox">
+            <Setter Property="Background" Value="#FFF1DF"/>
+        </Style>
+        <Style x:Key="myCheckBoxPadrao" TargetType="CheckBox">
+            <Setter Property="BorderBrush" Value="White"/>
+        </Style>
+        <Style x:Key="myRadioButtonPadrao" TargetType="RadioButton">
+            <Setter Property="BorderBrush" Value="White"/>
         </Style>
     </Window.Resources>
 
     <Grid>
-        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Visible">
+        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Collapsed">
             <TextBlock x:Name="textBlock5" HorizontalAlignment="Center" Margin="466,170,449,0" TextWrapping="Wrap" Text="LOGIN" VerticalAlignment="Top" FontSize="24" FontFamily="Microsoft YaHei UI" Width="81"/>
             <Grid HorizontalAlignment="Center" Height="93" Margin="370,250,370,0" VerticalAlignment="Top" Width="256">
                 <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
                 <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBoxLoginCpf" HorizontalAlignment="Left" Height="23" Margin="50,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-                <TextBox x:Name="textBoxLoginSenha" HorizontalAlignment="Left" Height="23" Margin="50,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+                <TextBox x:Name="textBoxLoginCpf" HorizontalAlignment="Left" Height="23" Margin="50,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Style="{StaticResource myTextBoxPadrao}"/>
+                <TextBox x:Name="textBoxLoginSenha" HorizontalAlignment="Left" Height="23" Margin="50,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Style="{StaticResource myTextBoxPadrao}"/>
                 <Button x:Name="button" Content="Entrar" HorizontalAlignment="Left" Margin="159,65,0,0" VerticalAlignment="Top" Width="91" Click="ButtonEntrarSistema_Click" Style="{StaticResource myButtonPadrao}" Height="28"/>
             </Grid>
 
         </Grid>
-        <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
+        <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Visible">
             <GroupBox x:Name="groupBoxFuncionario" Header="Cadastrar Funcionário" HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="190" Margin="10,10,0,0" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
@@ -37,89 +54,87 @@
                     <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" Text="Data de Nascimento:" VerticalAlignment="Top" RenderTransformOrigin="1.102,3.516"/>
                     <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Sexo:" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxNome" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-                    <TextBox x:Name="textBoxCpf" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-                    <RadioButton x:Name="radioButtonMasculino" Content="Masculino" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="radioButtonFeminino" Content="Feminino" HorizontalAlignment="Left" Margin="140,66,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxDataDeNascimento" HorizontalAlignment="Left" Height="23" Margin="140,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="textBoxSenha" HorizontalAlignment="Left" Height="23" Margin="50,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-                    <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarFuncionario_Click"/>
-                    <Button x:Name="buttonAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizar_Click" Visibility="Collapsed"/>
+                    <TextBox x:Name="textBoxNome" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Style="{StaticResource myTextBoxPadrao}"/>
+                    <TextBox x:Name="textBoxCpf" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Style="{StaticResource myTextBoxPadrao}"/>
+                    <RadioButton x:Name="radioButtonMasculino" Content="Masculino" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top" Style="{StaticResource myRadioButtonPadrao}"/>
+                    <RadioButton x:Name="radioButtonFeminino" Content="Feminino" HorizontalAlignment="Left" Margin="140,66,0,0" VerticalAlignment="Top" Style="{StaticResource myRadioButtonPadrao}"/>
+                    <TextBox x:Name="textBoxDataDeNascimento" HorizontalAlignment="Left" Height="23" Margin="140,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Style="{StaticResource myTextBoxPadrao}"/>
+                    <TextBox x:Name="textBoxSenha" HorizontalAlignment="Left" Height="23" Margin="50,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Style="{StaticResource myTextBoxPadrao}"/>
+                    <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarFuncionario_Click" Style="{StaticResource myButtonPadrao}"/>
+                    <Button x:Name="buttonAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizar_Click" Style="{StaticResource myButtonPadrao}" Visibility="Collapsed"/>
                 </Grid>
             </GroupBox>
-            <ListBox x:Name="listBoxFuncionarios" HorizontalAlignment="Left" Height="462" Margin="10,228,0,0" VerticalAlignment="Top" Width="319"/>
-            <Button x:Name="buttonListarFuncionarios" Content="Listar" HorizontalAlignment="Left" Margin="10,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonListarFuncionarios_Click"/>
-            <Button x:Name="buttonAtualizarFuncionario" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarFuncionario_Click"/>
-            <Button x:Name="buttonRemoverFuncionario" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonRemoverFuncionario_Click"/>
-            <Button x:Name="buttonDesativarFuncionario" Content="Desativar" HorizontalAlignment="Left" Margin="174,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonDesativarFuncionario_Click"/>
+            <ListBox x:Name="listBoxFuncionarios" HorizontalAlignment="Left" Height="462" Margin="10,228,0,0" VerticalAlignment="Top" Width="319" Style="{StaticResource myListBoxPadrao}"/>
+            <Button x:Name="buttonListarFuncionarios" Content="Listar" HorizontalAlignment="Left" Margin="10,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonListarFuncionarios_Click" Style="{StaticResource myButtonPadrao}"/>
+            <Button x:Name="buttonAtualizarFuncionario" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarFuncionario_Click" Style="{StaticResource myButtonPadrao}"/>
+            <Button x:Name="buttonRemoverFuncionario" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonRemoverFuncionario_Click" Style="{StaticResource myButtonRemove}"/>
+            <Button x:Name="buttonDesativarFuncionario" Content="Desativar" HorizontalAlignment="Left" Margin="174,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonDesativarFuncionario_Click" Style="{StaticResource myButtonPadrao}"/>
             <GroupBox x:Name="groupBoxPizza" Header="Cadastrar Pizza" HorizontalAlignment="Left" Height="705" Margin="339,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="685" Margin="10,10,-6,-12" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Preço:" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxNomePizza" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+                    <TextBox x:Name="textBoxNomePizza" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Style="{StaticResource myTextBoxPadrao}"/>
                     <TextBox x:Name="textBoxPreco" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Text="0.0" IsEnabled="False"/>
                     <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Ingredientes:" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="checkBoxAzeitona" Content="Azeitona" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Checked="CheckBoxAzeitona_Checked" Unchecked="CheckBoxAzeitona_Checked"/>
-                    <CheckBox x:Name="checkBoxBacon" Content="Bacon" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Checked="CheckBoxBacon_Checked" Unchecked="CheckBoxBacon_Checked"/>
-                    <CheckBox x:Name="checkBoxBrocolis" Content="Brócolis" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Checked="CheckBoxBrocolis_Checked" Unchecked="CheckBoxBrocolis_Checked"/>
-                    <CheckBox x:Name="checkBoxCalabresa" Content="Calabresa" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Checked="CheckBoxCalabresa_Checked" Unchecked="CheckBoxCalabresa_Checked"/>
-                    <CheckBox x:Name="checkBoxCamarao" Content="Camarão" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Checked="CheckBoxCamarao_Checked" Unchecked="CheckBoxCamarao_Checked"/>
-                    <CheckBox x:Name="checkBoxCarneDeSol" Content="Carne de Sol" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Checked="CheckBoxCarneDeSol_Checked" Unchecked="CheckBoxCarneDeSol_Checked"/>
-                    <CheckBox x:Name="checkBoxCatupiry" Content="Catupiry" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Checked="CheckBoxCatupiry_Checked" Unchecked="CheckBoxCatupiry_Checked"/>
-                    <CheckBox x:Name="checkBoxCebola" Content="Cebola" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top" Checked="CheckBoxCebola_Checked" Unchecked="CheckBoxCebola_Checked"/>
-                    <CheckBox x:Name="checkBoxChampignon" Content="Champignon" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Checked="CheckBoxChampignon_Checked" Unchecked="CheckBoxChampignon_Checked"/>
-                    <CheckBox x:Name="checkBoxErvilha" Content="Ervilha" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Checked="CheckBoxErvilha_Checked" Unchecked="CheckBoxErvilha_Checked"/>
-                    <CheckBox x:Name="checkBoxFrango" Content="Frango" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Checked="CheckBoxFrango_Checked" Unchecked="CheckBoxFrango_Checked"/>
-                    <CheckBox x:Name="checkBoxLombo" Content="Lombo" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top" Checked="CheckBoxLombo_Checked" Unchecked="CheckBoxLombo_Checked"/>
-                    <CheckBox x:Name="checkBoxManjericao" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,327,0,0" VerticalAlignment="Top" Checked="CheckBoxManjericao_Checked" Unchecked="CheckBoxManjericao_Checked"/>
-                    <CheckBox x:Name="checkBoxMilho" Content="Milho" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Checked="CheckBoxMilho_Checked" Unchecked="CheckBoxMilho_Checked"/>
-                    <CheckBox x:Name="checkBoxMolhoDeTomate" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Checked="CheckBoxMolhoDeTomate_Checked" Unchecked="CheckBoxMolhoDeTomate_Checked"/>
-                    <CheckBox x:Name="checkBoxOregano" Content="Orégano" HorizontalAlignment="Left" Margin="10,387,0,0" VerticalAlignment="Top" Checked="CheckBoxOregano_Checked" Unchecked="CheckBoxOregano_Checked"/>
-                    <CheckBox x:Name="checkBoxOvo" Content="Ovo" HorizontalAlignment="Left" Margin="10,407,0,0" VerticalAlignment="Top" Checked="CheckBoxOvo_Checked" Unchecked="CheckBoxOvo_Checked"/>
-                    <CheckBox x:Name="checkBoxPalmito" Content="Palmito" HorizontalAlignment="Left" Margin="10,427,0,0" VerticalAlignment="Top" Checked="CheckBoxPalmito_Checked" Unchecked="CheckBoxPalmito_Checked"/>
-                    <CheckBox x:Name="checkBoxPepperoni" Content="Pepperoni" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top" Checked="CheckBoxPepperoni_Checked" Unchecked="CheckBoxPepperoni_Checked"/>
-                    <CheckBox x:Name="checkBoxPresunto" Content="Presunto" HorizontalAlignment="Left" Margin="10,467,0,0" VerticalAlignment="Top" Checked="CheckBoxPresunto_Checked" Unchecked="CheckBoxPresunto_Checked"/>
-                    <CheckBox x:Name="checkBoxQueijoCoalho" Content="Queijo Coalho" HorizontalAlignment="Left" Margin="10,487,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoCoalho_Checked" Unchecked="CheckBoxQueijoCoalho_Checked"/>
-                    <CheckBox x:Name="checkBoxQueijoGorgonzola" Content="Queijo Gorgonzola" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoGorgonzola_Checked" Unchecked="CheckBoxQueijoGorgonzola_Checked"/>
-                    <CheckBox x:Name="checkBoxQueijoMussarela" Content="Queijo Mussarela" HorizontalAlignment="Left" Margin="10,527,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoMussarela_Checked" Unchecked="CheckBoxQueijoMussarela_Checked"/>
-                    <CheckBox x:Name="checkBoxQueijoParmessao" Content="Queijo Parmessão" HorizontalAlignment="Left" Margin="10,547,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoParmessao_Checked" Unchecked="CheckBoxQueijoParmessao_Checked"/>
-                    <CheckBox x:Name="checkBoxQueijoProvolone" Content="Queijo Provolone" HorizontalAlignment="Left" Margin="10,567,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoProvolone_Checked" Unchecked="CheckBoxQueijoProvolone_Checked"/>
-                    <CheckBox x:Name="checkBoxRucula" Content="Rúcula" HorizontalAlignment="Left" Margin="10,587,0,0" VerticalAlignment="Top" Checked="CheckBoxRucula_Checked" Unchecked="CheckBoxRucula_Checked"/>
-                    <CheckBox x:Name="checkBoxTomate" Content="Tomate" HorizontalAlignment="Left" Margin="10,607,0,0" VerticalAlignment="Top" Checked="CheckBoxTomate_Checked" Unchecked="CheckBoxTomate_Checked"/>
-                    <CheckBox x:Name="checkBoxTomateCereja" Content="Tomate Cereja" HorizontalAlignment="Left" Margin="10,627,0,0" VerticalAlignment="Top" Checked="CheckBoxTomateCereja_Checked" Unchecked="CheckBoxTomateCereja_Checked"/>
-                    <Button x:Name="buttonCadastrarPizza" Content="Cadastrar" HorizontalAlignment="Right" Margin="0,647,10,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarPizza_Click" Visibility="Visible"/>
-                    <Button x:Name="buttonAtualizarCadastroPizza" Content="Atualizar" HorizontalAlignment="Left" Margin="218,647,0,0" VerticalAlignment="Top" Width="75" Visibility="Collapsed" Click="ButtonAtualizarCadastroPizza_Click"/>
+                    <CheckBox x:Name="checkBoxAzeitona" Content="Azeitona" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Checked="CheckBoxAzeitona_Checked" Unchecked="CheckBoxAzeitona_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxBacon" Content="Bacon" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Checked="CheckBoxBacon_Checked" Unchecked="CheckBoxBacon_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxBrocolis" Content="Brócolis" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Checked="CheckBoxBrocolis_Checked" Unchecked="CheckBoxBrocolis_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxCalabresa" Content="Calabresa" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Checked="CheckBoxCalabresa_Checked" Unchecked="CheckBoxCalabresa_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxCamarao" Content="Camarão" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Checked="CheckBoxCamarao_Checked" Unchecked="CheckBoxCamarao_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxCarneDeSol" Content="Carne de Sol" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Checked="CheckBoxCarneDeSol_Checked" Unchecked="CheckBoxCarneDeSol_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxCatupiry" Content="Catupiry" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Checked="CheckBoxCatupiry_Checked" Unchecked="CheckBoxCatupiry_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxCebola" Content="Cebola" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top" Checked="CheckBoxCebola_Checked" Unchecked="CheckBoxCebola_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxChampignon" Content="Champignon" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Checked="CheckBoxChampignon_Checked" Unchecked="CheckBoxChampignon_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxErvilha" Content="Ervilha" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Checked="CheckBoxErvilha_Checked" Unchecked="CheckBoxErvilha_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxFrango" Content="Frango" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" Checked="CheckBoxFrango_Checked" Unchecked="CheckBoxFrango_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxLombo" Content="Lombo" HorizontalAlignment="Left" Margin="10,307,0,0" VerticalAlignment="Top" Checked="CheckBoxLombo_Checked" Unchecked="CheckBoxLombo_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxManjericao" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,327,0,0" VerticalAlignment="Top" Checked="CheckBoxManjericao_Checked" Unchecked="CheckBoxManjericao_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxMilho" Content="Milho" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Checked="CheckBoxMilho_Checked" Unchecked="CheckBoxMilho_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxMolhoDeTomate" Content="Molho de Tomate" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Checked="CheckBoxMolhoDeTomate_Checked" Unchecked="CheckBoxMolhoDeTomate_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxOregano" Content="Orégano" HorizontalAlignment="Left" Margin="10,387,0,0" VerticalAlignment="Top" Checked="CheckBoxOregano_Checked" Unchecked="CheckBoxOregano_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxOvo" Content="Ovo" HorizontalAlignment="Left" Margin="10,407,0,0" VerticalAlignment="Top" Checked="CheckBoxOvo_Checked" Unchecked="CheckBoxOvo_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxPalmito" Content="Palmito" HorizontalAlignment="Left" Margin="10,427,0,0" VerticalAlignment="Top" Checked="CheckBoxPalmito_Checked" Unchecked="CheckBoxPalmito_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxPepperoni" Content="Pepperoni" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top" Checked="CheckBoxPepperoni_Checked" Unchecked="CheckBoxPepperoni_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxPresunto" Content="Presunto" HorizontalAlignment="Left" Margin="10,467,0,0" VerticalAlignment="Top" Checked="CheckBoxPresunto_Checked" Unchecked="CheckBoxPresunto_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxQueijoCoalho" Content="Queijo Coalho" HorizontalAlignment="Left" Margin="10,487,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoCoalho_Checked" Unchecked="CheckBoxQueijoCoalho_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxQueijoGorgonzola" Content="Queijo Gorgonzola" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoGorgonzola_Checked" Unchecked="CheckBoxQueijoGorgonzola_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxQueijoMussarela" Content="Queijo Mussarela" HorizontalAlignment="Left" Margin="10,527,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoMussarela_Checked" Unchecked="CheckBoxQueijoMussarela_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxQueijoParmessao" Content="Queijo Parmessão" HorizontalAlignment="Left" Margin="10,547,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoParmessao_Checked" Unchecked="CheckBoxQueijoParmessao_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxQueijoProvolone" Content="Queijo Provolone" HorizontalAlignment="Left" Margin="10,567,0,0" VerticalAlignment="Top" Checked="CheckBoxQueijoProvolone_Checked" Unchecked="CheckBoxQueijoProvolone_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxRucula" Content="Rúcula" HorizontalAlignment="Left" Margin="10,587,0,0" VerticalAlignment="Top" Checked="CheckBoxRucula_Checked" Unchecked="CheckBoxRucula_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxTomate" Content="Tomate" HorizontalAlignment="Left" Margin="10,607,0,0" VerticalAlignment="Top" Checked="CheckBoxTomate_Checked" Unchecked="CheckBoxTomate_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <CheckBox x:Name="checkBoxTomateCereja" Content="Tomate Cereja" HorizontalAlignment="Left" Margin="10,627,0,0" VerticalAlignment="Top" Checked="CheckBoxTomateCereja_Checked" Unchecked="CheckBoxTomateCereja_Checked" Style="{StaticResource myCheckBoxPadrao}"/>
+                    <Button x:Name="buttonCadastrarPizza" Content="Cadastrar" HorizontalAlignment="Right" Margin="0,647,10,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrarPizza_Click" Style="{StaticResource myButtonPadrao}" Visibility="Visible"/>
+                    <Button x:Name="buttonAtualizarCadastroPizza" Content="Atualizar" HorizontalAlignment="Left" Margin="218,647,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource myButtonPadrao}" Visibility="Collapsed" Click="ButtonAtualizarCadastroPizza_Click"/>
                 </Grid>
 
             </GroupBox>
-            <ListBox x:Name="listBoxPizzas" HorizontalAlignment="Left" Height="669" Margin="667,21,0,0" VerticalAlignment="Top" Width="319"/>
-            <Button x:Name="buttonListarPizzas" Content="Listar" HorizontalAlignment="Left" Margin="667,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonListarPizzas_Click"/>
-            <Button x:Name="buttonAtualizarPizza" Content="Atualizar" HorizontalAlignment="Left" Margin="751,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonAtualizarPizza_Click"/>
-            <Button x:Name="buttonDesativarPizza" Content="Desativar" HorizontalAlignment="Left" Margin="831,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonDesativarPizza_Click"/>
-            <Button x:Name="buttonRemoverPizza" Content="Remover" HorizontalAlignment="Left" Margin="911,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverPizza_Click"/>
+            <ListBox x:Name="listBoxPizzas" HorizontalAlignment="Left" Height="669" Margin="667,21,0,0" VerticalAlignment="Top" Width="319" Style="{StaticResource myListBoxPadrao}"/>
+            <Button x:Name="buttonListarPizzas" Content="Listar" HorizontalAlignment="Left" Margin="667,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonListarPizzas_Click" Style="{StaticResource myButtonPadrao}"/>
+            <Button x:Name="buttonAtualizarPizza" Content="Atualizar" HorizontalAlignment="Left" Margin="751,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonAtualizarPizza_Click" Style="{StaticResource myButtonPadrao}"/>
+            <Button x:Name="buttonDesativarPizza" Content="Desativar" HorizontalAlignment="Left" Margin="831,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonDesativarPizza_Click" Style="{StaticResource myButtonPadrao}"/>
+            <Button x:Name="buttonRemoverPizza" Content="Remover" HorizontalAlignment="Left" Margin="911,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverPizza_Click" Style="{StaticResource myButtonRemove}"/>
         </Grid>
-        <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="727" Margin="10,10,0,0" VerticalAlignment="Top" Width="996" Visibility="Collapsed">
+        <Grid x:Name="gridFuncionario" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Collapsed">
             <GroupBox x:Name="groupBoxCliente" Header="Cadastrar Cliente" HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="190" Margin="10,10,0,0" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock12" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" Text="Data de Nascimento:" VerticalAlignment="Top" RenderTransformOrigin="1.102,3.516"/>
                     <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Sexo:" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxNomeCliente" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-                    <TextBox x:Name="textBoxCpfCliente" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-                    <RadioButton x:Name="radioButtonMasculinoCliente" Content="Masculino" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="radioButtonFemininoCliente" Content="Feminino" HorizontalAlignment="Left" Margin="140,66,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBoxDataDeNascimentoCliente" HorizontalAlignment="Left" Height="23" Margin="140,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="buttonCadastrarCliente" Content="Cadastrar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="ButtonCadastrarCliente_Click" Visibility="Visible"/>
+                    <TextBox x:Name="textBoxNomeCliente" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Style="{StaticResource myTextBoxPadrao}"/>
+                    <TextBox x:Name="textBoxCpfCliente" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Style="{StaticResource myTextBoxPadrao}"/>
+                    <RadioButton x:Name="radioButtonMasculinoCliente" Content="Masculino" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top" Style="{StaticResource myRadioButtonPadrao}"/>
+                    <RadioButton x:Name="radioButtonFemininoCliente" Content="Feminino" HorizontalAlignment="Left" Margin="140,66,0,0" VerticalAlignment="Top" Style="{StaticResource myRadioButtonPadrao}"/>
+                    <TextBox x:Name="textBoxDataDeNascimentoCliente" HorizontalAlignment="Left" Height="23" Margin="140,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Style="{StaticResource myTextBoxPadrao}"/>
+                    <Button x:Name="buttonCadastrarCliente" Content="Cadastrar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="ButtonCadastrarCliente_Click" Style="{StaticResource myButtonPadrao}" Visibility="Visible"/>
                     <Button x:Name="buttonAtualizarCadastroCliente" Content="Atualizar" HorizontalAlignment="Left" Margin="185,142,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarCadastroCliente_Click"  Visibility="Collapsed"/>
                 </Grid>
             </GroupBox>
-            <ListBox x:Name="listBoxClientes" HorizontalAlignment="Left" Height="462" Margin="10,228,0,0" VerticalAlignment="Top" Width="319"/>
-            <Button x:Name="buttonListarClientes" Content="Listar" HorizontalAlignment="Left" Margin="10,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonListarClientes_Click"/>
-            <Button x:Name="buttonAtualizarCliente" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarCliente_Click"/>
-            <Button x:Name="buttonRemoverCliente" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverCliente_Click"/>
+            <ListBox x:Name="listBoxClientes" HorizontalAlignment="Left" Height="462" Margin="10,228,0,0" VerticalAlignment="Top" Width="319" Style="{StaticResource myListBoxPadrao}"/>
+            <Button x:Name="buttonListarClientes" Content="Listar" HorizontalAlignment="Left" Margin="10,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonListarClientes_Click" Style="{StaticResource myButtonPadrao}"/>
+            <Button x:Name="buttonAtualizarCliente" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarCliente_Click" Style="{StaticResource myButtonPadrao}"/>
+            <Button x:Name="buttonRemoverCliente" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource myButtonRemove}"/>
         </Grid>
-
     </Grid>
-
 </Window>

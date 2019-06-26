@@ -95,6 +95,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{3814a839-b5da-4b7e-9b62-2bf2870bcc77}</Project>
       <Name>Modelo</Name>

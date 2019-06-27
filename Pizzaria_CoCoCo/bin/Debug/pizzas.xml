@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <ArrayOfMPizza xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <MPizza>
-    <IdPizza>0</IdPizza>
+    <IdPizza>1</IdPizza>
     <Tipo>Frango</Tipo>
     <Preco>400</Preco>
     <Ingredientes>
       <string>Azeitona</string>
       <string>Frango</string>
-      <string>Manjericão</string>
+      <string>ManjericÃ£o</string>
       <string>Queijo Mussarela</string>
     </Ingredientes>
     <Ativo>true</Ativo>
   </MPizza>
   <MPizza>
-    <IdPizza>0</IdPizza>
-    <Tipo>Calabresa</Tipo>
-    <Preco>400</Preco>
-    <Ingredientes>
-      <string>Azeitona</string>
-      <string>Calabresa</string>
-      <string>Manjericão</string>
-      <string>Queijo Mussarela</string>
-    </Ingredientes>
-    <Ativo>true</Ativo>
-  </MPizza>
-  <MPizza>
-    <IdPizza>0</IdPizza>
+    <IdPizza>2</IdPizza>
     <Tipo>Mussarela</Tipo>
-    <Preco>4</Preco>
+    <Preco>7.5</Preco>
     <Ingredientes>
       <string>Azeitona</string>
-      <string>Manjericão</string>
-      <string>Orégano</string>
+      <string>Molho de Tomate</string>
+      <string>Queijo Mussarela</string>
       <string>Tomate</string>
     </Ingredientes>
-    <Ativo>false</Ativo>
+    <Ativo>true</Ativo>
+  </MPizza>
+  <MPizza>
+    <IdPizza>3</IdPizza>
+    <Tipo>teste</Tipo>
+    <Preco>1</Preco>
+    <Ingredientes>
+      <string>Azeitona</string>
+    </Ingredientes>
+    <Ativo>true</Ativo>
   </MPizza>
 </ArrayOfMPizza>

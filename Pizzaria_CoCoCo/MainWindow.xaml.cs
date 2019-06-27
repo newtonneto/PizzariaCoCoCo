@@ -64,9 +64,11 @@ namespace Pizzaria_CoCoCo
             List<MPizza> listaDePizzas = pizza.ListarPizzas();
 
             listBoxPizzas.Items.Clear();
+            listBoxPizzasDisponiveis.Items.Clear();
             foreach (MPizza p in listaDePizzas)
             {
                 listBoxPizzas.Items.Add(p);
+                listBoxPizzasDisponiveis.Items.Add(p);
             }
         }
 
@@ -297,6 +299,7 @@ namespace Pizzaria_CoCoCo
                 gridLogin.Visibility = Visibility.Collapsed;
                 gridFuncionario.Visibility = Visibility.Visible;
                 atualizaListBoxClientes();
+                atualizaListBoxPizzas();
             }
             else
             {
@@ -1139,6 +1142,36 @@ namespace Pizzaria_CoCoCo
                 cliente.DeletarCliente(clienteRemover);
                 //Chama a função responsável por atualizar o conteudo do listbox de clientes
                 atualizaListBoxClientes();
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void ButtonAdicionarPizzaCarrinho_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Recupera um objeto presente na listbox de PizzasDisponiveis para adicionar a listbox de Carrinho
+                MPizza pizzaSelecionada = (MPizza)listBoxPizzasDisponiveis.SelectedItem;
+                listBoxCarrinho.Items.Add(pizzaSelecionada);
+                textBoxTotalPedido.Text = (double.Parse(textBoxTotalPedido.Text) + pizzaSelecionada.Preco).ToString();
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void ButtonRemoverPizzaCarrinho_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Recupera um objeto presente na listbox de Carrinho para remover o mesmo
+                MPizza pizzaSelecionada = (MPizza)listBoxCarrinho.SelectedItem;
+                listBoxCarrinho.Items.Remove(pizzaSelecionada);
+                textBoxTotalPedido.Text = (double.Parse(textBoxTotalPedido.Text) - pizzaSelecionada.Preco).ToString();
             }
             catch (NullReferenceException erro)
             {

@@ -42,6 +42,11 @@ D:\Izzy_New2\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csp
 D:\Izzy_New2\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csproj.CopyComplete
 D:\Izzy_New2\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.exe
 D:\Izzy_New2\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.pdb
+D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csprojAssemblyReference.cache
+D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\MainWindow.g.cs
+D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\App.g.cs
+D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo_MarkupCompile.cache
+D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo_MarkupCompile.lref
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.exe.config
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.exe
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.pdb
@@ -51,11 +56,6 @@ D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\bin\Deb
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\bin\Debug\Modelo.pdb
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\bin\Debug\Negocio.pdb
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\bin\Debug\Persistencia.pdb
-D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csprojAssemblyReference.cache
-D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\MainWindow.g.cs
-D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\App.g.cs
-D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo_MarkupCompile.cache
-D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo_MarkupCompile.lref
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\MainWindow.baml
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.g.resources
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.Properties.Resources.resources

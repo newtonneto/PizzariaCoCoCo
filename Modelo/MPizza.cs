@@ -16,7 +16,7 @@ namespace Modelo
 
         public override string ToString()
         {
-            return Tipo + " / R$" + Preco + " / " + Ativo;
+            return IdPizza + " / " + Tipo + " / R$" + Preco + " / " + Ativo;
         }
     }
 }

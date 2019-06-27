@@ -18,8 +18,10 @@ namespace Negocio
             {
                 PPizza dados = new PPizza();
                 List<MPizza> listaDePizzas = dados.Abrir();
+                pizza.IdPizza = listaDePizzas.Count + 1; //Substitui o AtualizarIdPizzaFull()
                 listaDePizzas.Add(pizza);
                 dados.Salvar(listaDePizzas);
+                //AtualizarIdPizzaFull();
             }
             else
             {
@@ -42,8 +44,23 @@ namespace Negocio
             MPizza pizzaDesatualizada = listaDePizzas.Where(temp => temp.Tipo == pizza.Tipo).Single();
             //pizza.Ativo = !pizzaDesatualizada.Ativo;
             listaDePizzas.Remove(pizzaDesatualizada);
+            pizza.IdPizza = listaDePizzas.Count + 1; //Substitui o AtualizarIdPizzaFull()
             listaDePizzas.Add(pizza);
             dados.Salvar(listaDePizzas);
+            //AtualizarIdPizzaFull();
+        }
+
+        public void AtualizarIdPizzaFull()
+        {
+            List<MPizza> listaDePizzas = ListarPizzas();
+            int id = 1;
+            foreach (MPizza p in listaDePizzas)
+            {
+                p.IdPizza = id;
+                AtualizarPizza(p);
+                id++;
+            }
+
         }
 
         public void DeletarPizza(string nomeDaPizza)
@@ -52,6 +69,12 @@ namespace Negocio
             List<MPizza> listaDePizzas = dados.Abrir();
             MPizza pizzaDeletada = listaDePizzas.Where(temp => temp.Tipo == nomeDaPizza).Single();
             listaDePizzas.Remove(pizzaDeletada);
+            
+            for (int i = pizzaDeletada.IdPizza; i <= listaDePizzas.Count; i++)
+            {
+                listaDePizzas[i - 1].IdPizza = i;
+            }
+
             dados.Salvar(listaDePizzas);
         }
     }

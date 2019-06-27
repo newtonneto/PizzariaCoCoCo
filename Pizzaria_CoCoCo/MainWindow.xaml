@@ -38,7 +38,7 @@
     </Window.Resources>
 
     <Grid>
-        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Collapsed">
+        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Visible">
             <TextBlock x:Name="textBlock5" HorizontalAlignment="Center" Margin="466,170,449,0" TextWrapping="Wrap" Text="LOGIN" VerticalAlignment="Top" FontSize="24" FontFamily="Microsoft YaHei UI" Width="81"/>
             <Grid HorizontalAlignment="Center" Height="93" Margin="370,250,370,0" VerticalAlignment="Top" Width="256">
                 <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
@@ -49,7 +49,7 @@
             </Grid>
 
         </Grid>
-        <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Visible">
+        <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Collapsed">
             <GroupBox x:Name="groupBoxFuncionario" Header="Cadastrar Funcionário" HorizontalAlignment="Left" Height="213" Margin="10,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="190" Margin="10,10,0,0" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top"/>

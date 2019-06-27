@@ -48,7 +48,7 @@ namespace Negocio
             PFuncionario dados = new PFuncionario();
             List<MFuncionario> listaDeFuncionarios = dados.Abrir();
             MFuncionario funcionarioDesatualizado = listaDeFuncionarios.Where(temp => temp.Cpf == funcionario.Cpf).Single();
-            funcionario.Ativo = funcionarioDesatualizado.Ativo;
+            //funcionario.Ativo = !funcionarioDesatualizado.Ativo;
             listaDeFuncionarios.Remove(funcionarioDesatualizado);
             listaDeFuncionarios.Add(funcionario);
             dados.Salvar(listaDeFuncionarios);

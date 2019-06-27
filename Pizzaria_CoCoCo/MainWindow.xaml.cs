@@ -445,7 +445,7 @@ namespace Pizzaria_CoCoCo
                 //Recupera um objeto presente na list box
                 MFuncionario funcionarioEstado = (MFuncionario)listBoxFuncionarios.SelectedItem;
                 //Altera o seu atributo Ativo para false;
-                funcionarioEstado.Ativo = false;
+                funcionarioEstado.Ativo = !funcionarioEstado.Ativo;
                 //Envia o funcionario atualizado para o metodo responsável por salvar essa atualização
                 funcionario.AtualizarFuncionario(funcionarioEstado);
                 atualizaListBoxFuncionarios();
@@ -992,7 +992,7 @@ namespace Pizzaria_CoCoCo
                 //Recupera um objeto presente na list box
                 MPizza pizzaEstado = (MPizza)listBoxPizzas.SelectedItem;
                 //Altera o seu atributo Ativo para false;
-                pizzaEstado.Ativo = false;
+                pizzaEstado.Ativo = !pizzaEstado.Ativo;
                 //Envia a pizza atualizada para o metodo responsável por salvar essa atualização
                 pizza.AtualizarPizza(pizzaEstado);
                 atualizaListBoxPizzas();

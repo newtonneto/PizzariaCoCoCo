@@ -40,7 +40,7 @@ namespace Negocio
             PPizza dados = new PPizza();
             List<MPizza> listaDePizzas = dados.Abrir();
             MPizza pizzaDesatualizada = listaDePizzas.Where(temp => temp.Tipo == pizza.Tipo).Single();
-            pizza.Ativo = pizzaDesatualizada.Ativo;
+            //pizza.Ativo = !pizzaDesatualizada.Ativo;
             listaDePizzas.Remove(pizzaDesatualizada);
             listaDePizzas.Add(pizza);
             dados.Salvar(listaDePizzas);

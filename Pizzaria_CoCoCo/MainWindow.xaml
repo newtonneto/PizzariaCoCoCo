@@ -10,9 +10,12 @@
         <Style x:Key="myBG" TargetType="Grid">
             <Setter Property="Background" Value="#ffd397"/>
         </Style>
+        
         <Style x:Key="myButtonPadrao" TargetType="Button">
             <Setter Property="Background" Value="#ffa20a"/>
             <Setter Property="BorderBrush" Value="#ffa20a"/>
+            
+            
         </Style>
         <Style x:Key="myButtonRemove" TargetType="Button">
             <Setter Property="Background" Value="#c1200f"/>

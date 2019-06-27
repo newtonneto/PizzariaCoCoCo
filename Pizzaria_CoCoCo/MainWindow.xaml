@@ -44,7 +44,7 @@
                 <TextBox x:Name="textBoxLoginSenha" HorizontalAlignment="Left" Height="23" Margin="50,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Style="{StaticResource myTextBoxPadrao}"/>
                 <Button x:Name="button" Content="Entrar" HorizontalAlignment="Left" Margin="159,136,0,-71" VerticalAlignment="Top" Width="91" Click="ButtonEntrarSistema_Click" Style="{StaticResource myButtonPadrao}" Height="28"/>
             </Grid>
-            
+
 
 
         </Grid>
@@ -161,5 +161,6 @@
                 </Grid>
             </GroupBox>
         </Grid>
+        <Button x:Name="buttonFechar" Content="X" Margin="991,0,0,0" VerticalAlignment="Top" Click="ButtonFechar_Click"/>
     </Grid>
 </Window>

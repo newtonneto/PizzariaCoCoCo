@@ -64,3 +64,47 @@ D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Deb
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csproj.CopyComplete
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.exe
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.exe.config
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.exe
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Modelo.dll
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Negocio.dll
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Persistencia.dll
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Modelo.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Negocio.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\bin\Debug\Persistencia.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csprojAssemblyReference.cache
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\MainWindow.g.cs
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\App.g.cs
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo_MarkupCompile.cache
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo_MarkupCompile.lref
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\MainWindow.baml
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.g.resources
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.Properties.Resources.resources
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csproj.GenerateResource.cache
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csproj.CoreCompileInputs.cache
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csproj.CopyComplete
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.exe
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.pdb
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.exe.config
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.exe
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Pizzaria_CoCoCo.pdb
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Modelo.dll
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Negocio.dll
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Persistencia.dll
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Modelo.pdb
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Negocio.pdb
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\bin\Debug\Persistencia.pdb
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csprojAssemblyReference.cache
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\MainWindow.g.cs
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\App.g.cs
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo_MarkupCompile.cache
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo_MarkupCompile.lref
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\MainWindow.baml
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.g.resources
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.Properties.Resources.resources
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csproj.GenerateResource.cache
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csproj.CoreCompileInputs.cache
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.csproj.CopyComplete
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.exe
+C:\Users\Punished New2\source\repos\PizzariaCoCoCo_v2\Pizzaria_CoCoCo\obj\Debug\Pizzaria_CoCoCo.pdb

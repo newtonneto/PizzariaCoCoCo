@@ -1296,5 +1296,14 @@ namespace Pizzaria_CoCoCo
                 MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
             }
         }
+
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
+        {
+            gridFuncionario.Visibility = Visibility.Collapsed;
+            gridGerente.Visibility = Visibility.Collapsed;
+            gridLogin.Visibility = Visibility.Visible;
+            textBoxLoginCpf.Text = String.Empty;
+            textBoxLoginSenha.Text = String.Empty;
+        }
     }
 }

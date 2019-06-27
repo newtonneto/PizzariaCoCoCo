@@ -31,3 +31,14 @@ D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Negocio\obj\Debug\Negoc
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Negocio\obj\Debug\Negocio.dll
 D:\Izzy_New2\Visual Studio 2019\Projetos\Pizzaria_CoCoCo\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Negocio.dll
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Modelo.dll
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Persistencia.dll
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Modelo.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\bin\Debug\Persistencia.pdb
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.dll
+C:\Users\Punished New2\Documents\GitHub\PizzariaCoCoCo\Negocio\obj\Debug\Negocio.pdb

@@ -35,7 +35,8 @@
     </Window.Resources>
 
     <Grid>
-        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Visible">
+        <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Visible" RenderTransformOrigin="0.501,0.499">
+            <Image Margin="402,130,414,407" Source="cococo.png" Stretch="Fill"/>
             <Grid HorizontalAlignment="Center" Height="204" Margin="383,250,365,0" VerticalAlignment="Top" Width="268">
                 <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="0,87,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
                 <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="0,115,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
@@ -43,7 +44,8 @@
                 <TextBox x:Name="textBoxLoginSenha" HorizontalAlignment="Left" Height="23" Margin="50,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Style="{StaticResource myTextBoxPadrao}"/>
                 <Button x:Name="button" Content="Entrar" HorizontalAlignment="Left" Margin="159,136,0,-71" VerticalAlignment="Top" Width="91" Click="ButtonEntrarSistema_Click" Style="{StaticResource myButtonPadrao}" Height="28"/>
             </Grid>
-            <Image Margin="409,117,407,420" Source="118e5ca9-a6f1-4b1c-92c8-5e91cda4aa2a_200x200.png" Stretch="Fill"/>
+            
+
 
         </Grid>
         <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Collapsed">

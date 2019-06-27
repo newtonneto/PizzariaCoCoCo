@@ -19,5 +19,12 @@
     <Cpf>999</Cpf>
     <Sexo>Feminino</Sexo>
     <Nascimento>2001-01-01T00:00:00</Nascimento>
+    <Pedidos />
+  </MCliente>
+  <MCliente>
+    <Nome>paulla</Nome>
+    <Cpf>12231223</Cpf>
+    <Sexo>Feminino</Sexo>
+    <Nascimento>2011-11-11T00:00:00</Nascimento>
   </MCliente>
 </ArrayOfMCliente>

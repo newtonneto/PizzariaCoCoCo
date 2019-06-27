@@ -137,7 +137,7 @@
             <Button x:Name="buttonListarClientes" Content="Listar" HorizontalAlignment="Left" Margin="10,695,0,0" VerticalAlignment="Top" Width="75" Click="ButtonListarClientes_Click" Style="{StaticResource myButtonPadrao}"/>
             <Button x:Name="buttonAtualizarCliente" Content="Atualizar" HorizontalAlignment="Left" Margin="94,695,0,0" VerticalAlignment="Top" Width="75" Click="buttonAtualizarCliente_Click" Style="{StaticResource myButtonPadrao}"/>
             <Button x:Name="buttonRemoverCliente" Content="Remover" HorizontalAlignment="Left" Margin="254,695,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource myButtonRemove}"/>
-            <GroupBox x:Name="groupBoxPedido" Header="Cadastrar Cliente" HorizontalAlignment="Left" Height="705" Margin="339,10,0,0" VerticalAlignment="Top" Width="319">
+            <GroupBox x:Name="groupBoxPedido" Header="Fazer Pedido" HorizontalAlignment="Left" Height="705" Margin="339,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="685" Margin="10,10,-6,-12" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Cliente:" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock16" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Total:" VerticalAlignment="Top"/>
@@ -151,7 +151,7 @@
                     <Button x:Name="buttonFecharPedido" Content="Fechar Pedido" HorizontalAlignment="Left" Margin="203,367,0,0" VerticalAlignment="Top" Width="90" Click="ButtonFecharPedido_Click" Style="{StaticResource myButtonPadrao}"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBoxCaixa" Header="Cadastrar Cliente" HorizontalAlignment="Left" Height="705" Margin="668,10,0,0" VerticalAlignment="Top" Width="319">
+            <GroupBox x:Name="groupBoxCaixa" Header="Caixa" HorizontalAlignment="Left" Height="705" Margin="668,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="685" Margin="10,10,-6,-12" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock18" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Pedidos do dia:" VerticalAlignment="Top"/>
                     <ListBox x:Name="listBoxPedidos" HorizontalAlignment="Left" Height="331" Margin="10,31,0,0" VerticalAlignment="Top" Width="283" Style="{StaticResource myListBoxPadrao}"/>

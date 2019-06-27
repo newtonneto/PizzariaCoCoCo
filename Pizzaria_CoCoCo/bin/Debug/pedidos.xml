@@ -24,4 +24,16 @@
     <Data>0001-01-01T00:00:00</Data>
     <Total>407.5</Total>
   </MPedido>
+  <MPedido>
+    <IdPedido>3</IdPedido>
+    <Cliente>
+      <Nome>paulla</Nome>
+      <Cpf>12231223</Cpf>
+      <Sexo>Feminino</Sexo>
+      <Nascimento>2011-11-11T00:00:00</Nascimento>
+      <Pedidos />
+    </Cliente>
+    <Data>0001-01-01T00:00:00</Data>
+    <Total>407.5</Total>
+  </MPedido>
 </ArrayOfMPedido>

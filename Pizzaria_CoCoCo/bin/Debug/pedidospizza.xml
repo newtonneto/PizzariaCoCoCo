@@ -120,4 +120,19 @@
     <IdPedido>1</IdPedido>
     <IdPizza>2</IdPizza>
   </MItemPedido>
+  <MItemPedido>
+    <Tamanho>Gigante</Tamanho>
+    <IdPedido>2</IdPedido>
+    <IdPizza>2</IdPizza>
+  </MItemPedido>
+  <MItemPedido>
+    <Tamanho>Gigante</Tamanho>
+    <IdPedido>2</IdPedido>
+    <IdPizza>1</IdPizza>
+  </MItemPedido>
+  <MItemPedido>
+    <Tamanho>Gigante</Tamanho>
+    <IdPedido>2</IdPedido>
+    <IdPizza>2</IdPizza>
+  </MItemPedido>
 </ArrayOfMItemPedido>

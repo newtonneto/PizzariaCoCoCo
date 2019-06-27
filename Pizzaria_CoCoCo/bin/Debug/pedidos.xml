@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ArrayOfMPedido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MPedido>
+    <IdPedido>1</IdPedido>
+    <Cliente>
+      <Nome>new</Nome>
+      <Cpf>999</Cpf>
+      <Sexo>Feminino</Sexo>
+      <Nascimento>2001-01-01T00:00:00</Nascimento>
+      <Pedidos />
+    </Cliente>
+    <Data>0001-01-01T00:00:00</Data>
+    <Total>408.5</Total>
+  </MPedido>
+  <MPedido>
+    <IdPedido>2</IdPedido>
+    <Cliente>
+      <Nome>new</Nome>
+      <Cpf>999</Cpf>
+      <Sexo>Feminino</Sexo>
+      <Nascimento>2001-01-01T00:00:00</Nascimento>
+      <Pedidos />
+    </Cliente>
+    <Data>0001-01-01T00:00:00</Data>
+    <Total>408.5</Total>
+  </MPedido>
+</ArrayOfMPedido>

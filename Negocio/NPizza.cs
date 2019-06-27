@@ -63,6 +63,20 @@ namespace Negocio
 
         }
 
+        public MPizza RetornaPizza(int idPizza)
+        {
+            List<MPizza> listaDePizzas = ListarPizzas();
+            foreach (MPizza p in listaDePizzas)
+            {
+                if (p.IdPizza == idPizza)
+                {
+                    return p;
+                }
+            }
+
+            return null;
+        }
+
         public void DeletarPizza(string nomeDaPizza)
         {
             PPizza dados = new PPizza();

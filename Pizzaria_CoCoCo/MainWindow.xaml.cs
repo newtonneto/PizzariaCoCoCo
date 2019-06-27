@@ -37,6 +37,8 @@ namespace Pizzaria_CoCoCo
         NFuncionario funcionario = new NFuncionario();
         NPizza pizza = new NPizza();
         NCliente cliente = new NCliente();
+        NPedido pedido = new NPedido();
+        NItemPedido pedidopizza = new NItemPedido();
         public MainWindow()
         {
             InitializeComponent();
@@ -82,6 +84,19 @@ namespace Pizzaria_CoCoCo
             foreach (MCliente c in listaDeClientes)
             {
                 listBoxClientes.Items.Add(c);
+            }
+        }
+
+        //Função para atualizar o ListBox de Pedidos
+        private void atualizaListBoxPedidos()
+        {
+            //Usa o objeto pedidos para receber a lista de pedidos cadastrados
+            List<MPedido> listaDePedidos = pedido.ListarPedidos();
+
+            listBoxPedidos.Items.Clear();
+            foreach (MPedido p in listaDePedidos)
+            {
+                listBoxPedidos.Items.Add(p);
             }
         }
 
@@ -279,6 +294,14 @@ namespace Pizzaria_CoCoCo
             atualizaListBoxClientes();
         }
 
+        private void ResetaCadastroPedido()
+        {
+            textBoxNomeClientePedido.Text = String.Empty;
+            textBoxTotalPedido.Text = "0.0";
+            listBoxCarrinho.Items.Clear();
+            atualizaListBoxPedidos();
+        }
+
 
         //Metodo de Login no sistema
         private void ButtonEntrarSistema_Click(object sender, RoutedEventArgs e)
@@ -300,6 +323,7 @@ namespace Pizzaria_CoCoCo
                 gridFuncionario.Visibility = Visibility.Visible;
                 atualizaListBoxClientes();
                 atualizaListBoxPizzas();
+                atualizaListBoxPedidos();
             }
             else
             {
@@ -1172,6 +1196,100 @@ namespace Pizzaria_CoCoCo
                 MPizza pizzaSelecionada = (MPizza)listBoxCarrinho.SelectedItem;
                 listBoxCarrinho.Items.Remove(pizzaSelecionada);
                 textBoxTotalPedido.Text = (double.Parse(textBoxTotalPedido.Text) - pizzaSelecionada.Preco).ToString();
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void ButtonFecharPedido_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Criar um objeto do tipo MPedido e atribui a ele o que foi digitado nos campos de cadastro
+                MPedido novoPedido = new MPedido();
+                List<MCliente> listaDeClientes = cliente.ListarClientes();
+                MCliente clienteCadastrado = new MCliente();
+
+                //if (listaDeClientes.Any(temp => temp.Cpf == textBoxCpfCliente.Text).Single())
+                if ((clienteCadastrado = listaDeClientes.Where(temp => temp.Cpf == textBoxNomeClientePedido.Text).Single()) != null)
+                {
+                    //clienteCadastrado = listaDeClientes.Where(temp => temp.Cpf == textBoxCpfCliente.Text).Single();
+                    novoPedido.Cliente = clienteCadastrado;
+                }
+                else
+                {
+                    clienteCadastrado.Nome = "Anonimo";
+                    clienteCadastrado.Cpf = "-1";
+                }
+
+                if (listBoxCarrinho.Items.Count > 0)
+                {
+                    foreach (MPizza item in listBoxCarrinho.Items)
+                    {
+                        MItemPedido itemPedido = new MItemPedido();
+                        itemPedido.IdPedido = pedido.ListarPedidos().Count;
+                        //itemPedido.IdPizza = ((MPizza)listBoxCarrinho.SelectedItem).IdPizza;
+                        itemPedido.IdPizza = item.IdPizza;
+                        itemPedido.Tamanho = "Gigante";
+
+                        pedidopizza.InserirPedidoPizza(itemPedido);
+                    }
+                }
+                else
+                {
+                    throw new CadastroIncompletoException("Cadastro incompleto, não foi possível finalizar a operação");
+                }
+
+                novoPedido.Total = double.Parse(textBoxTotalPedido.Text);
+                //Envia o objeto novoPedido para um objeto pedido, que irá tratar o mesmo
+                pedido.InserirPedido(novoPedido);
+            }
+            catch (CadastroIncompletoException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+            catch (Exception erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+            finally
+            {
+                ResetaCadastroPedido();
+            }
+        }
+
+        private void ButtonFecharConta_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Recupera um objeto presente na listbox de Pedidos para remover o mesmo
+                MPedido pedidoSelecionado = (MPedido)listBoxPedidos.SelectedItem;
+                listBoxPedidos.Items.Remove(pedidoSelecionado);
+                pedido.DeletarPedido(pedidoSelecionado);
+            }
+            catch (NullReferenceException erro)
+            {
+                MessageBoxResult exibeErro = MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void ButtonExibirPedido_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Recupera um objeto presente na listbox de Pedidos para exibir os detalhes
+                MPedido pedidoSelecionado = (MPedido)listBoxPedidos.SelectedItem;
+                //List<MPizza> listaDePizzas = pedidopizza.PizzasPedidas(pedidoSelecionado.IdPedido);
+
+                textBoxDetalhesPedido.Text = String.Empty;
+                textBoxDetalhesPedido.Text = pedidoSelecionado.ToString();
+
+                foreach(MPizza p in pedidopizza.PizzasPedidas(pedidoSelecionado.IdPedido))
+                {
+                    textBoxDetalhesPedido.Text = textBoxDetalhesPedido.Text + "\n" + p.ToString();
+                }
             }
             catch (NullReferenceException erro)
             {

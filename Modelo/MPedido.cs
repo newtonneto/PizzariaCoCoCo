@@ -12,6 +12,11 @@ namespace Modelo
         public MCliente Cliente { get; set; }
         public DateTime Data { get; set; }
         public double Total { get; set; }
-        public int Mesa { get; set; }
+        //public int Mesa { get; set; }
+
+        public override string ToString()
+        {
+            return IdPedido + " / " + Total;
+        }
     }
 }

@@ -44,6 +44,8 @@
     <Compile Include="PCliente.cs" />
     <Compile Include="PFuncionario.cs" />
     <Compile Include="PGerente.cs" />
+    <Compile Include="PItemPedido.cs" />
+    <Compile Include="PPedido.cs" />
     <Compile Include="PPizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -36,14 +36,14 @@
 
     <Grid>
         <Grid x:Name="gridLogin" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Visible">
-            <TextBlock x:Name="textBlock5" HorizontalAlignment="Center" Margin="466,170,449,0" TextWrapping="Wrap" Text="LOGIN" VerticalAlignment="Top" FontSize="24" FontFamily="Microsoft YaHei UI" Width="81"/>
-            <Grid HorizontalAlignment="Center" Height="93" Margin="370,250,370,0" VerticalAlignment="Top" Width="256">
-                <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
-                <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBoxLoginCpf" HorizontalAlignment="Left" Height="23" Margin="50,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Style="{StaticResource myTextBoxPadrao}"/>
-                <TextBox x:Name="textBoxLoginSenha" HorizontalAlignment="Left" Height="23" Margin="50,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Style="{StaticResource myTextBoxPadrao}"/>
-                <Button x:Name="button" Content="Entrar" HorizontalAlignment="Left" Margin="159,65,0,0" VerticalAlignment="Top" Width="91" Click="ButtonEntrarSistema_Click" Style="{StaticResource myButtonPadrao}" Height="28"/>
+            <Grid HorizontalAlignment="Center" Height="204" Margin="383,250,365,0" VerticalAlignment="Top" Width="268">
+                <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="0,87,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top"/>
+                <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="0,115,0,0" TextWrapping="Wrap" Text="Senha:" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBoxLoginCpf" HorizontalAlignment="Left" Height="23" Margin="50,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Style="{StaticResource myTextBoxPadrao}"/>
+                <TextBox x:Name="textBoxLoginSenha" HorizontalAlignment="Left" Height="23" Margin="50,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Style="{StaticResource myTextBoxPadrao}"/>
+                <Button x:Name="button" Content="Entrar" HorizontalAlignment="Left" Margin="159,136,0,-71" VerticalAlignment="Top" Width="91" Click="ButtonEntrarSistema_Click" Style="{StaticResource myButtonPadrao}" Height="28"/>
             </Grid>
+            <Image Margin="409,117,407,420" Source="118e5ca9-a6f1-4b1c-92c8-5e91cda4aa2a_200x200.png" Stretch="Fill"/>
 
         </Grid>
         <Grid x:Name="gridGerente" HorizontalAlignment="Left" Height="737" VerticalAlignment="Top" Width="1016" Style="{StaticResource myBG}" Visibility="Collapsed">
@@ -142,20 +142,20 @@
                     <TextBlock x:Name="textBlock17" HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Carrinho:" VerticalAlignment="Top"/>
                     <TextBox x:Name="textBoxNomeClientePedido" HorizontalAlignment="Left" Height="23" Margin="50,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Style="{StaticResource myTextBoxPadrao}"/>
                     <TextBox x:Name="textBoxTotalPedido" HorizontalAlignment="Left" Height="23" Margin="50,38,0,0" Text="0.0" IsEnabled="False" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Style="{StaticResource myTextBoxPadrao}"/>
-                    <ListBox x:Name="listBoxCarrinho" HorizontalAlignment="Left" Height="275" Margin="10,87,0,0" VerticalAlignment="Top" Width="283"/>
-                    <ListBox x:Name="listBoxPizzasDisponiveis" HorizontalAlignment="Left" Height="275" Margin="10,392,0,0" VerticalAlignment="Top" Width="283"/>
-                    <Button x:Name="buttonAdicionarPizzaCarrinho" Content="Adicionar" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" Click="ButtonAdicionarPizzaCarrinho_Click"/>
-                    <Button x:Name="buttonRemoverPizzaCarrinho" Content="Remover" HorizontalAlignment="Left" Margin="90,367,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverPizzaCarrinho_Click"/>
-                    <Button x:Name="buttonFecharPedido" Content="Fechar Pedido" HorizontalAlignment="Left" Margin="203,367,0,0" VerticalAlignment="Top" Width="90"/>
+                    <ListBox x:Name="listBoxCarrinho" HorizontalAlignment="Left" Height="275" Margin="10,87,0,0" VerticalAlignment="Top" Width="283" Style="{StaticResource myListBoxPadrao}"/>
+                    <ListBox x:Name="listBoxPizzasDisponiveis" HorizontalAlignment="Left" Height="275" Margin="10,392,0,0" VerticalAlignment="Top" Width="283" Style="{StaticResource myListBoxPadrao}"/>
+                    <Button x:Name="buttonAdicionarPizzaCarrinho" Content="Adicionar" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" Click="ButtonAdicionarPizzaCarrinho_Click" Style="{StaticResource myButtonPadrao}"/>
+                    <Button x:Name="buttonRemoverPizzaCarrinho" Content="Remover" HorizontalAlignment="Left" Margin="90,367,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoverPizzaCarrinho_Click" Style="{StaticResource myButtonRemove}"/>
+                    <Button x:Name="buttonFecharPedido" Content="Fechar Pedido" HorizontalAlignment="Left" Margin="203,367,0,0" VerticalAlignment="Top" Width="90" Style="{StaticResource myButtonPadrao}"/>
                 </Grid>
             </GroupBox>
             <GroupBox x:Name="groupBoxCaixa" Header="Cadastrar Cliente" HorizontalAlignment="Left" Height="705" Margin="668,10,0,0" VerticalAlignment="Top" Width="319">
                 <Grid HorizontalAlignment="Left" Height="685" Margin="10,10,-6,-12" VerticalAlignment="Top" Width="303">
                     <TextBlock x:Name="textBlock18" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Pedidos do dia:" VerticalAlignment="Top"/>
-                    <ListBox x:Name="listBoxPedidosDoDia" HorizontalAlignment="Left" Height="331" Margin="10,31,0,0" VerticalAlignment="Top" Width="283"/>
-                    <Button x:Name="buttonFecharConta" Content="Adicionar" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonExibirPedido" Content="Remover" HorizontalAlignment="Left" Margin="218,367,0,0" VerticalAlignment="Top" Width="75"/>
-                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="272" Margin="10,392,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283"/>
+                    <ListBox x:Name="listBoxPedidosDoDia" HorizontalAlignment="Left" Height="331" Margin="10,31,0,0" VerticalAlignment="Top" Width="283" Style="{StaticResource myListBoxPadrao}"/>
+                    <Button x:Name="buttonFecharConta" Content="Adicionar" HorizontalAlignment="Left" Margin="10,367,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource myButtonPadrao}"/>
+                    <Button x:Name="buttonExibirPedido" Content="Remover" HorizontalAlignment="Left" Margin="218,367,0,0" VerticalAlignment="Top" Width="75" Style="{StaticResource myButtonPadrao}"/>
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="272" Margin="10,392,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" Style="{StaticResource myTextBoxPadrao}"/>
                 </Grid>
             </GroupBox>
         </Grid>
